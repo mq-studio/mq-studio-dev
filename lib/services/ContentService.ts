@@ -1,6 +1,7 @@
 /**
  * Content Service
  * Handles CRUD operations for content (musings, artworks, publications, projects)
+ * Includes security measures for validation and sanitization
  */
 
 import { promises as fs } from 'fs';
@@ -10,11 +11,9 @@ import {
   ContentFile,
   ContentMetadata,
   ContentType,
-  Musing,
-  Artwork,
-  Publication,
-  Project,
 } from '@/lib/types/cms';
+import { validateSlug, validateContentType, validateContentStatus } from '@/lib/utils/validation';
+import { sanitizeContent, sanitizeMetadata, sanitizeErrorForLogging } from '@/lib/utils/sanitization';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 
@@ -44,8 +43,19 @@ export class ContentService {
 
   /**
    * Get content by slug
+   * Validates slug to prevent path traversal attacks
    */
   async getContentBySlug(type: ContentType, slug: string): Promise<ContentFile | null> {
+    // Validate slug format
+    if (!validateSlug(slug)) {
+      throw new Error('Invalid slug format');
+    }
+
+    // Validate content type
+    if (!validateContentType(type)) {
+      throw new Error('Invalid content type');
+    }
+
     const filePath = path.join(CONTENT_DIR, type, `${slug}.mdx`);
 
     try {
@@ -54,20 +64,23 @@ export class ContentService {
 
       return {
         path: filePath,
-        frontmatter: data,
-        content: body,
+        frontmatter: sanitizeMetadata(data),
+        content: sanitizeContent(body),
         metadata: this.createMetadata(slug, type, data),
       };
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
         return null;
       }
-      throw error;
+      const sanitizedError = sanitizeErrorForLogging(error);
+      console.error('Error reading content file:', sanitizedError);
+      throw new Error('Failed to read content file');
     }
   }
 
   /**
    * Create new content
+   * Validates slug and sanitizes content before writing
    */
   async createContent(
     type: ContentType,
@@ -75,11 +88,32 @@ export class ContentService {
     metadata: Partial<ContentMetadata>,
     content: string
   ): Promise<ContentFile> {
+    // Validate slug format
+    if (!validateSlug(slug)) {
+      throw new Error('Invalid slug format');
+    }
+
+    // Validate content type
+    if (!validateContentType(type)) {
+      throw new Error('Invalid content type');
+    }
+
+    // Validate status if provided
+    if (metadata.status && !validateContentStatus(metadata.status)) {
+      throw new Error('Invalid content status');
+    }
+
     const fileDir = path.join(CONTENT_DIR, type);
     const filePath = path.join(fileDir, `${slug}.mdx`);
 
     // Ensure directory exists
-    await fs.mkdir(fileDir, { recursive: true });
+    try {
+      await fs.mkdir(fileDir, { recursive: true });
+    } catch (error) {
+      const sanitizedError = sanitizeErrorForLogging(error);
+      console.error('Failed to create directory:', sanitizedError);
+      throw new Error('Failed to create content directory');
+    }
 
     // Check if file already exists
     try {
@@ -91,28 +125,39 @@ export class ContentService {
       }
     }
 
+    // Sanitize content and metadata
+    const sanitizedContent = sanitizeContent(content);
+    const sanitizedMetadata = sanitizeMetadata(metadata);
+
     const frontmatter = {
-      title: metadata.title || 'Untitled',
-      description: metadata.description || '',
-      status: metadata.status || 'draft',
+      title: sanitizedMetadata.title || 'Untitled',
+      description: sanitizedMetadata.description || '',
+      status: sanitizedMetadata.status || 'draft',
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-      ...metadata,
+      ...sanitizedMetadata,
     };
 
-    const fileContent = matter.stringify(content, frontmatter);
-    await fs.writeFile(filePath, fileContent);
+    try {
+      const fileContent = matter.stringify(sanitizedContent, frontmatter);
+      await fs.writeFile(filePath, fileContent);
+    } catch (error) {
+      const sanitizedError = sanitizeErrorForLogging(error);
+      console.error('Failed to write content file:', sanitizedError);
+      throw new Error('Failed to create content');
+    }
 
     return {
       path: filePath,
       frontmatter,
-      content,
+      content: sanitizedContent,
       metadata: this.createMetadata(slug, type, frontmatter),
     };
   }
 
   /**
    * Update existing content
+   * Validates slug and sanitizes content before writing
    */
   async updateContent(
     type: ContentType,
@@ -120,6 +165,21 @@ export class ContentService {
     updates: Partial<ContentMetadata>,
     content?: string
   ): Promise<ContentFile> {
+    // Validate slug format
+    if (!validateSlug(slug)) {
+      throw new Error('Invalid slug format');
+    }
+
+    // Validate content type
+    if (!validateContentType(type)) {
+      throw new Error('Invalid content type');
+    }
+
+    // Validate status if provided
+    if (updates.status && !validateContentStatus(updates.status)) {
+      throw new Error('Invalid content status');
+    }
+
     const filePath = path.join(CONTENT_DIR, type, `${slug}.mdx`);
 
     const existing = await this.getContentBySlug(type, slug);
@@ -127,27 +187,48 @@ export class ContentService {
       throw new Error(`Content with slug "${slug}" not found`);
     }
 
+    // Sanitize content and metadata
+    const sanitizedContent = content ? sanitizeContent(content) : existing.content;
+    const sanitizedUpdates = sanitizeMetadata(updates);
+
     const frontmatter = {
       ...existing.frontmatter,
-      ...updates,
+      ...sanitizedUpdates,
       updatedAt: new Date().toISOString(),
     };
 
-    const fileContent = matter.stringify(content || existing.content, frontmatter);
-    await fs.writeFile(filePath, fileContent);
+    try {
+      const fileContent = matter.stringify(sanitizedContent, frontmatter);
+      await fs.writeFile(filePath, fileContent);
+    } catch (error) {
+      const sanitizedError = sanitizeErrorForLogging(error);
+      console.error('Failed to update content file:', sanitizedError);
+      throw new Error('Failed to update content');
+    }
 
     return {
       path: filePath,
       frontmatter,
-      content: content || existing.content,
+      content: sanitizedContent,
       metadata: this.createMetadata(slug, type, frontmatter),
     };
   }
 
   /**
    * Delete content
+   * Validates slug to prevent path traversal attacks
    */
   async deleteContent(type: ContentType, slug: string): Promise<void> {
+    // Validate slug format
+    if (!validateSlug(slug)) {
+      throw new Error('Invalid slug format');
+    }
+
+    // Validate content type
+    if (!validateContentType(type)) {
+      throw new Error('Invalid content type');
+    }
+
     const filePath = path.join(CONTENT_DIR, type, `${slug}.mdx`);
 
     try {
@@ -156,7 +237,9 @@ export class ContentService {
       if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
         throw new Error(`Content with slug "${slug}" not found`);
       }
-      throw error;
+      const sanitizedError = sanitizeErrorForLogging(error);
+      console.error('Failed to delete content file:', sanitizedError);
+      throw new Error('Failed to delete content');
     }
   }
 
@@ -205,6 +288,7 @@ export class ContentService {
 
   /**
    * Read a single content file
+   * Private method - sanitizes errors to not expose paths in production
    */
   private async readContentFile(type: ContentType, filename: string): Promise<ContentFile | null> {
     const filePath = path.join(CONTENT_DIR, type, filename);
@@ -216,12 +300,13 @@ export class ContentService {
 
       return {
         path: filePath,
-        frontmatter: data,
-        content: body,
+        frontmatter: sanitizeMetadata(data),
+        content: sanitizeContent(body),
         metadata: this.createMetadata(slug, type, data),
       };
     } catch (error) {
-      console.error(`Error reading content file: ${filePath}`, error);
+      const sanitizedError = sanitizeErrorForLogging(error);
+      console.error('Error reading content file:', sanitizedError);
       return null;
     }
   }
@@ -232,23 +317,35 @@ export class ContentService {
   private createMetadata(
     slug: string,
     type: ContentType,
-    frontmatter: Record<string, any>
+    frontmatter: Record<string, unknown>
   ): ContentMetadata {
+    const title = typeof frontmatter.title === 'string' ? frontmatter.title : 'Untitled';
+    const description = typeof frontmatter.description === 'string' ? frontmatter.description : undefined;
+    const author = typeof frontmatter.author === 'string' ? frontmatter.author : 'Admin';
+    const createdAt = frontmatter.createdAt ? new Date(frontmatter.createdAt as string | number) : new Date();
+    const updatedAt = frontmatter.updatedAt ? new Date(frontmatter.updatedAt as string | number) : new Date();
+    const publishedAt = frontmatter.publishedAt ? new Date(frontmatter.publishedAt as string | number) : undefined;
+    const status = validateContentStatus(String(frontmatter.status)) ? (frontmatter.status as 'draft' | 'published' | 'archived') : 'draft';
+    const featured = typeof frontmatter.featured === 'boolean' ? frontmatter.featured : false;
+    const tags = Array.isArray(frontmatter.tags) ? (frontmatter.tags as string[]) : [];
+    const seoTitle = typeof frontmatter.seoTitle === 'string' ? frontmatter.seoTitle : undefined;
+    const seoDescription = typeof frontmatter.seoDescription === 'string' ? frontmatter.seoDescription : undefined;
+
     return {
       id: slug,
       slug,
       type,
-      title: frontmatter.title || 'Untitled',
-      description: frontmatter.description,
-      author: frontmatter.author || 'Admin',
-      createdAt: new Date(frontmatter.createdAt || Date.now()),
-      updatedAt: new Date(frontmatter.updatedAt || Date.now()),
-      publishedAt: frontmatter.publishedAt ? new Date(frontmatter.publishedAt) : undefined,
-      status: frontmatter.status || 'draft',
-      featured: frontmatter.featured || false,
-      tags: frontmatter.tags || [],
-      seoTitle: frontmatter.seoTitle,
-      seoDescription: frontmatter.seoDescription,
+      title,
+      description,
+      author,
+      createdAt,
+      updatedAt,
+      publishedAt,
+      status,
+      featured,
+      tags,
+      seoTitle,
+      seoDescription,
     };
   }
 }

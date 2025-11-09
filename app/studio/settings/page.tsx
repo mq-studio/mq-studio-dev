@@ -14,11 +14,13 @@ export const metadata = {
 };
 
 export default async function SettingsPage() {
-  const session = await getServerSession(authConfig) as any;
+  const session = await getServerSession(authConfig);
 
   if (!session?.user) {
     redirect('/studio/login');
   }
 
-  return <Settings user={session.user} />;
+  // Cast to full User type (with id, role, createdAt, updatedAt added by session callback)
+  const user = session.user as any;
+  return <Settings user={user} />;
 }
