@@ -3,6 +3,7 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import DOMPurify from 'isomorphic-dompurify';
 import SearchBar from '@/components/search/SearchBar';
 import { SearchResult, Content } from '@/lib/types/content';
 
@@ -90,8 +91,14 @@ function SearchResultsContent() {
   };
 
   const renderHighlightedText = (text: string, highlight?: string): { __html: string } => {
-    if (!highlight) return { __html: text };
-    return { __html: highlight };
+    const content = highlight || text;
+    // Sanitize HTML to prevent XSS attacks - only allow <mark> tags for highlighting
+    const sanitized = DOMPurify.sanitize(content, {
+      ALLOWED_TAGS: ['mark'],
+      ALLOWED_ATTR: [],
+      KEEP_CONTENT: true,
+    });
+    return { __html: sanitized };
   };
 
   return (
