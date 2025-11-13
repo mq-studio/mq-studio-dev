@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import RecentContent from '@/components/content/RecentContent';
 import AboutSection from '@/components/about/AboutSection';
+import Header from '@/components/header/Header';
 import { contentService } from '@/lib/content/content-service';
 
 // Lazy-load SearchBar component to reduce initial bundle
@@ -29,34 +30,7 @@ export default async function Home() {
   const recentContent = await getRecentContent();
   return (
     <>
-      <header className="border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-            <div className="mb-2 sm:mb-0">
-              <Link href="/" className="flex items-center gap-3 font-montserrat font-semibold text-lg">
-                <span className="w-6 h-6 bg-gradient-to-br from-[var(--moura-teal)] to-[var(--scholar-blue)] rounded-full"></span>
-                MQ STUDIO
-              </Link>
-              <div className="font-lora text-sm text-[var(--charcoal-wash)] mt-1">
-                Feeling · Thinking · Doing
-              </div>
-            </div>
-            <nav className="font-montserrat text-sm">
-              <Link href="/gallery/artworks" className="hover:text-[var(--moura-teal)] transition-colors">Artworks</Link>
-              <span className="mx-2">·</span>
-              <Link href="/gallery/publications" className="hover:text-[var(--moura-teal)] transition-colors">Publications</Link>
-              <span className="mx-2">·</span>
-              <Link href="/musings" className="hover:text-[var(--moura-teal)] transition-colors">Musings</Link>
-              <span className="mx-2">·</span>
-              <Link href="/press" className="hover:text-[var(--moura-teal)] transition-colors">Press</Link>
-              <span className="mx-2">·</span>
-              <Link href="/projects" className="hover:text-[var(--moura-teal)] transition-colors">Projects</Link>
-              <span className="mx-2">·</span>
-              <Link href="/search" className="hover:text-[var(--moura-teal)] transition-colors">Search</Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main className="max-w-7xl mx-auto px-6">
         {/* Three-Column Hero with Gradient Accents - V1 Design */}

@@ -135,23 +135,48 @@ npm run start
 
 ## 📄 Content Management
 
+**For Site Owners (Non-Technical Users):**
+
+See the **[Content Management Guide](./CONTENT_MANAGEMENT_GUIDE.md)** for step-by-step instructions on:
+- Adding publications, artworks, musings, and projects
+- Working with images, PDFs, and audio files
+- Using ready-made templates
+- Tips and best practices
+
+**Quick Start:**
+1. Copy a template from the `templates/` folder
+2. Fill in your information
+3. Save in the appropriate `content/` subfolder
+4. Your content will appear automatically!
+
 ### Adding New Content
 
 **Publications:**
 ```bash
-# Add markdown file to content/publications/
-# Include frontmatter: title, date, tags, pdfUrl
-```
-
-**Musings:**
-```bash
-# Add markdown file to content/musings/
-# Include frontmatter: title, date, audioUrl (optional)
+# Copy template
+cp templates/publication-template.md content/publications/my-paper.md
+# Edit the file and fill in your information
+# Save and you're done!
 ```
 
 **Artworks:**
 ```bash
-# 1. Add optimized image to public/images/artworks/
+# Upload image to public/images/artworks/ first
+# Copy template
+cp templates/artwork-template.md content/artworks/my-artwork.md
+# Edit the file with artwork details
+```
+
+**Musings:**
+```bash
+# Copy template
+cp templates/musing-template.md content/musings/my-musing.md
+# Edit and add your thoughts
+```
+
+**Artworks:**
+```bash
+# Add optimized image to public/images/artworks/
 # 2. Original should be in mq-studio-assets repo
 # 3. Add markdown file to content/artworks/
 ```
