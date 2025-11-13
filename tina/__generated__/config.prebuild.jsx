@@ -61,6 +61,7 @@ var config_default = defineConfig({
             };
           }
         },
+        // @ts-ignore - defaultItem may not be in type definitions but works in runtime
         defaultItem: () => {
           return {
             title: "",
@@ -159,6 +160,8 @@ var config_default = defineConfig({
         path: "content/artworks",
         format: "md",
         ui: {
+          // @ts-ignore - defaultItem may not be in type definitions but works in runtime
+          // @ts-ignore - defaultItem may not be in type definitions but works in runtime
           defaultItem: () => ({
             title: "",
             year: (/* @__PURE__ */ new Date()).getFullYear(),
@@ -335,6 +338,7 @@ var config_default = defineConfig({
         path: "content/publications",
         format: "md",
         ui: {
+          // @ts-ignore - defaultItem may not be in type definitions but works in runtime
           defaultItem: () => ({
             title: "",
             authors: ["Moura Quayle"],
@@ -398,6 +402,7 @@ var config_default = defineConfig({
         path: "content/projects",
         format: "md",
         ui: {
+          // @ts-ignore - defaultItem may not be in type definitions but works in runtime
           defaultItem: () => ({
             title: "",
             status: "in-progress",
