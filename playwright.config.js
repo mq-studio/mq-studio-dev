@@ -37,7 +37,14 @@ module.exports = defineConfig({
 
     /* Video on failure */
     video: 'retain-on-failure',
+
+    /* Increase default timeout for actions */
+    actionTimeout: 10000, // 10 seconds for actions
+    navigationTimeout: 45000, // 45 seconds for page navigation
   },
+
+  /* Global timeout for each test */
+  timeout: 60000, // 60 seconds per test
 
   /* Configure projects for major browsers */
   projects: [

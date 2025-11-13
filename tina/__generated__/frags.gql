@@ -1,0 +1,69 @@
+fragment MusingsParts on Musings {
+  __typename
+  title
+  category
+  body
+  status
+  date
+  description
+  tags
+  slug
+  author
+  excerpt
+  legacy
+  originalUrl
+}
+
+fragment ArtworksParts on Artworks {
+  __typename
+  title
+  imageUrl
+  medium
+  year
+  description
+  dimensions {
+    __typename
+    width
+    height
+    unit
+  }
+  availability
+  price
+  featured
+  artistStatement
+  location
+  tags
+  date
+  thumbnailUrl
+  slug
+  exhibitionHistory {
+    __typename
+    venue
+    date
+    location
+  }
+  technicalNotes
+  body
+}
+
+fragment PublicationsParts on Publications {
+  __typename
+  title
+  authors
+  journal
+  year
+  abstract
+  url
+  doi
+}
+
+fragment ProjectsParts on Projects {
+  __typename
+  title
+  description
+  featuredImage
+  status
+  client
+  startDate
+  endDate
+}

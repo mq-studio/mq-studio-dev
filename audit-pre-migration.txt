@@ -1,0 +1,6 @@
+  Size: 2.3G
+  Last commit: 2025-11-07 14:04:44 -0800
+  Remote: https://github.com/mq-studio/mq-studio-dev.git
+  Uncommitted changes: 1 files
+
+Repository: /home/ichardart/code/clients/shufa-and-leadership
