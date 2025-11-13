@@ -135,19 +135,22 @@ npm run start
 
 ## 📄 Content Management
 
-**For Site Owners (Non-Technical Users):**
+### 🎯 Quick Start (For Non-Technical Users)
 
-See the **[Content Management Guide](./CONTENT_MANAGEMENT_GUIDE.md)** for step-by-step instructions on:
-- Adding publications, artworks, musings, and projects
-- Working with images, PDFs, and audio files
-- Using ready-made templates
-- Tips and best practices
+**Never managed a website before? No problem!**
 
-**Quick Start:**
-1. Copy a template from the `templates/` folder
+👉 **[Quick Start Guide](./QUICK_START_CONTENT.md)** - 5 minutes to add your first content!
+
+**For More Details:**
+- **[Complete Content Management Guide](./CONTENT_MANAGEMENT_GUIDE.md)** - Everything you need to know
+- **[Templates Folder](./templates/)** - Ready-to-use templates
+
+### How It Works
+
+1. Copy a template from `templates/` folder
 2. Fill in your information
-3. Save in the appropriate `content/` subfolder
-4. Your content will appear automatically!
+3. Save in the right `content/` subfolder
+4. Your content appears automatically!
 
 ### Adding New Content
 
@@ -155,8 +158,7 @@ See the **[Content Management Guide](./CONTENT_MANAGEMENT_GUIDE.md)** for step-b
 ```bash
 # Copy template
 cp templates/publication-template.md content/publications/my-paper.md
-# Edit the file and fill in your information
-# Save and you're done!
+# Edit and fill in your information
 ```
 
 **Artworks:**
@@ -164,15 +166,21 @@ cp templates/publication-template.md content/publications/my-paper.md
 # Upload image to public/images/artworks/ first
 # Copy template
 cp templates/artwork-template.md content/artworks/my-artwork.md
-# Edit the file with artwork details
 ```
 
 **Musings:**
 ```bash
-# Copy template
 cp templates/musing-template.md content/musings/my-musing.md
-# Edit and add your thoughts
 ```
+
+**Projects:**
+```bash
+cp templates/project-template.md content/projects/my-project.md
+```
+
+---
+
+## 🛠️ For Developers
 
 **Artworks:**
 ```bash
