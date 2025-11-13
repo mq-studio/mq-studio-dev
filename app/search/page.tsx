@@ -6,24 +6,44 @@ import Link from 'next/link';
 import DOMPurify from 'isomorphic-dompurify';
 import SearchBar from '@/components/search/SearchBar';
 import { SearchResult, Content } from '@/lib/types/content';
+import { searchQuerySchema, formatValidationError } from '@/lib/validation/schemas';
 
 // Separate component that uses useSearchParams
 function SearchResultsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const query = searchParams.get('q') || '';
+  const rawQuery = searchParams.get('q') || '';
+  const rawCategory = searchParams.get('category');
 
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [validationError, setValidationError] = useState<string | null>(null);
+
+  // Validate search parameters
+  const validationResult = searchQuerySchema.safeParse({
+    q: rawQuery || undefined,
+    category: rawCategory || undefined,
+  });
+
+  const query = validationResult.success ? (validationResult.data.q || '') : '';
+  const category = validationResult.success ? validationResult.data.category : undefined;
 
   useEffect(() => {
+    if (!validationResult.success) {
+      setValidationError(formatValidationError(validationResult.error));
+      setLoading(false);
+      return;
+    }
+
+    setValidationError(null);
+
     if (query) {
       fetchResults(query);
     } else {
       setLoading(false);
     }
-  }, [query]);
+  }, [query, validationResult.success]);
 
   const fetchResults = async (searchQuery: string) => {
     setLoading(true);
@@ -179,8 +199,28 @@ function SearchResultsContent() {
           </div>
         )}
 
+        {/* Validation Error State */}
+        {validationError && (
+          <div className="text-center py-12">
+            <div className="bg-red-50 border border-red-200 rounded-lg p-6 max-w-2xl mx-auto">
+              <h2 className="font-montserrat text-xl font-semibold mb-2 text-red-800">
+                Invalid Search Parameters
+              </h2>
+              <p className="text-red-700 mb-4">
+                {validationError}
+              </p>
+              <Link
+                href="/search"
+                className="inline-block bg-[var(--moura-teal)] text-white px-6 py-2 rounded-md font-montserrat font-medium hover:brightness-110 transition-all"
+              >
+                Start New Search
+              </Link>
+            </div>
+          </div>
+        )}
+
         {/* Error State */}
-        {error && (
+        {error && !validationError && (
           <div className="text-center py-12">
             <p className="text-[var(--muted-foreground)] mb-4">
               Unable to load search results. Please try again.
