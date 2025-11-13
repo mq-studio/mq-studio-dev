@@ -5,22 +5,23 @@ import { searchQuerySchema, slugSchema, contentApiRequestSchema, formatValidatio
 import { contentRateLimiter, checkRateLimit } from '@/lib/rate-limit';
 
 export async function GET(request: NextRequest) {
-  // Apply rate limiting
-  const rateLimitResult = await checkRateLimit(request, contentRateLimiter, 20);
+  // Apply rate limiting (60 requests per minute allows for autocomplete search)
+  const rateLimitResult = await checkRateLimit(request, contentRateLimiter, 60);
   if (!rateLimitResult.success) {
+    const resetAtISO = ('resetAt' in rateLimitResult) ? rateLimitResult.resetAt.toISOString() : new Date(Date.now() + 60000).toISOString();
     return NextResponse.json(
       {
         error: 'Too many requests',
         message: 'Rate limit exceeded. Please try again later.',
-        resetAt: rateLimitResult.resetAt.toISOString(),
+        resetAt: resetAtISO,
       },
       {
         status: 429,
         headers: {
-          'Retry-After': '10',
-          'X-RateLimit-Limit': '20',
+          'Retry-After': '60',
+          'X-RateLimit-Limit': '60',
           'X-RateLimit-Remaining': '0',
-          'X-RateLimit-Reset': rateLimitResult.resetAt.toISOString(),
+          'X-RateLimit-Reset': resetAtISO,
         },
       }
     );
@@ -133,22 +134,23 @@ export async function GET(request: NextRequest) {
 
 // API route to get recent content and other POST actions
 export async function POST(request: NextRequest) {
-  // Apply rate limiting
-  const rateLimitResult = await checkRateLimit(request, contentRateLimiter, 20);
+  // Apply rate limiting (60 requests per minute)
+  const rateLimitResult = await checkRateLimit(request, contentRateLimiter, 60);
   if (!rateLimitResult.success) {
+    const resetAtISO = ('resetAt' in rateLimitResult) ? rateLimitResult.resetAt.toISOString() : new Date(Date.now() + 60000).toISOString();
     return NextResponse.json(
       {
         error: 'Too many requests',
         message: 'Rate limit exceeded. Please try again later.',
-        resetAt: rateLimitResult.resetAt.toISOString(),
+        resetAt: resetAtISO,
       },
       {
         status: 429,
         headers: {
-          'Retry-After': '10',
-          'X-RateLimit-Limit': '20',
+          'Retry-After': '60',
+          'X-RateLimit-Limit': '60',
           'X-RateLimit-Remaining': '0',
-          'X-RateLimit-Reset': rateLimitResult.resetAt.toISOString(),
+          'X-RateLimit-Reset': resetAtISO,
         },
       }
     );

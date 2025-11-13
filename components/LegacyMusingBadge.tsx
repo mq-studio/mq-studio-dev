@@ -6,6 +6,8 @@
  * maintaining visual harmony with current content.
  */
 
+'use client';
+
 import React from 'react';
 
 interface LegacyMusingBadgeProps {

@@ -5,37 +5,37 @@
  * Uses next-rate-limit for efficient, in-memory rate limiting without external dependencies.
  *
  * Configuration:
- * - Search API: 10 requests per 10 seconds per IP
- * - Content API: 20 requests per 10 seconds per IP
- * - General API: 30 requests per 10 seconds per IP
+ * - Search API: 60 requests per 60 seconds per IP (allows autocomplete)
+ * - Content API: 60 requests per 60 seconds per IP
+ * - General API: 100 requests per 60 seconds per IP
  */
 
 import rateLimit from 'next-rate-limit';
 
 /**
  * Rate limiter for search endpoint
- * Stricter limit due to potentially expensive search operations
+ * Allows for autocomplete typing (60 requests per minute = ~1 per second)
  */
 export const searchRateLimiter = rateLimit({
-  interval: 10 * 1000, // 10 seconds
+  interval: 60 * 1000, // 60 seconds
   uniqueTokenPerInterval: 500, // Max 500 unique IPs tracked at once
 });
 
 /**
  * Rate limiter for content API endpoint
- * Moderate limit for general content retrieval
+ * Moderate limit for general content retrieval (60 requests per minute)
  */
 export const contentRateLimiter = rateLimit({
-  interval: 10 * 1000, // 10 seconds
+  interval: 60 * 1000, // 60 seconds
   uniqueTokenPerInterval: 500,
 });
 
 /**
  * Rate limiter for general API endpoints
- * More relaxed limit for other operations
+ * More relaxed limit for other operations (100 requests per minute)
  */
 export const generalRateLimiter = rateLimit({
-  interval: 10 * 1000, // 10 seconds
+  interval: 60 * 1000, // 60 seconds
   uniqueTokenPerInterval: 500,
 });
 
@@ -76,14 +76,13 @@ export async function checkRateLimit(
   limiter: ReturnType<typeof rateLimit>,
   limit: number = 10
 ): Promise<{ success: true } | { success: false; remaining: number; resetAt: Date }> {
-  const identifier = getClientIP(request);
-
   try {
-    await limiter.check(request, limit, identifier);
+    // next-rate-limit uses checkNext which throws on rate limit exceeded
+    limiter.checkNext(request as any, limit);
     return { success: true };
   } catch (error: any) {
     // Rate limit exceeded
-    const resetAt = new Date(Date.now() + 10 * 1000); // 10 seconds from now
+    const resetAt = new Date(Date.now() + 60 * 1000); // 60 seconds from now
     return {
       success: false,
       remaining: 0,
