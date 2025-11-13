@@ -19,6 +19,43 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: 'MQ Studio - Moura Quayle | Feeling, Thinking, Doing',
   description: 'Academia, Leadership, and Design converge in Moura Quayle\'s digital studio. Explore academic publications, watercolor art, and reflections on governance and design.',
+  keywords: [
+    'Moura Quayle',
+    'landscape architecture',
+    'governance',
+    'design thinking',
+    'watercolor art',
+    'academic publications',
+    'urban planning',
+    'community design',
+  ],
+  authors: [{ name: 'Moura Quayle' }],
+  creator: 'Moura Quayle',
+  publisher: 'MQ Studio',
+  openGraph: {
+    title: 'MQ Studio - Moura Quayle | Feeling, Thinking, Doing',
+    description: 'Academia, Leadership, and Design converge in Moura Quayle\'s digital studio.',
+    url: 'https://mouraquayle.ca',
+    siteName: 'MQ Studio',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MQ Studio - Moura Quayle',
+    description: 'Academia, Leadership, and Design converge in Moura Quayle\'s digital studio.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function RootLayout({
@@ -28,6 +65,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to external resources for better performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* DNS prefetch for potential future requests */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      </head>
       <body className={`${montserrat.variable} ${lora.variable} font-lora antialiased flex flex-col min-h-screen`}>
         {/* Skip to main content link for keyboard users */}
         <a 
