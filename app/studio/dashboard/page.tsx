@@ -2,9 +2,12 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import OnboardingWizard from '@/components/cms/OnboardingWizard';
+import { useOnboarding } from '@/hooks/useOnboarding';
 
 export default function DashboardPage() {
   const router = useRouter();
+  const { showOnboarding, isLoading, completeOnboarding, skipOnboarding } = useOnboarding();
 
   const cards = [
     {
@@ -37,9 +40,24 @@ export default function DashboardPage() {
     },
   ];
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-gray-500">Loading your studio...</div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
+    <>
+      {showOnboarding && (
+        <OnboardingWizard
+          onComplete={completeOnboarding}
+          onSkip={skipOnboarding}
+        />
+      )}
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
       <div className="bg-white shadow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
@@ -129,5 +147,6 @@ export default function DashboardPage() {
         </div>
       </main>
     </div>
+    </>
   );
 }
