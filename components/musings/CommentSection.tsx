@@ -18,10 +18,17 @@ export default function CommentSection({ slug, title }: CommentSectionProps) {
 
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
-    script.setAttribute('data-repo', 'YOUR_GITHUB_USERNAME/YOUR_REPO_NAME'); // TODO: Replace with actual repo
-    script.setAttribute('data-repo-id', 'YOUR_REPO_ID'); // TODO: Replace with actual repo ID
-    script.setAttribute('data-category', 'Musings');
-    script.setAttribute('data-category-id', 'YOUR_CATEGORY_ID'); // TODO: Replace with actual category ID
+
+    // Get repository details from environment or use defaults
+    const repo = process.env.NEXT_PUBLIC_GISCUS_REPO || 'mq-studio/mq-studio-dev';
+    const repoId = process.env.NEXT_PUBLIC_GISCUS_REPO_ID || '';
+    const category = process.env.NEXT_PUBLIC_GISCUS_CATEGORY || 'Musings';
+    const categoryId = process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID || '';
+
+    script.setAttribute('data-repo', repo);
+    script.setAttribute('data-repo-id', repoId);
+    script.setAttribute('data-category', category);
+    script.setAttribute('data-category-id', categoryId);
     script.setAttribute('data-mapping', 'pathname');
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
