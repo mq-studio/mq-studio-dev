@@ -110,15 +110,40 @@ function SearchResultsContent() {
     });
   };
 
-  const renderHighlightedText = (text: string, highlight?: string): { __html: string } => {
+  // Safe component for rendering highlighted text without dangerouslySetInnerHTML
+  const HighlightedText: React.FC<{ text: string; highlight?: string; className?: string }> = ({
+    text,
+    highlight,
+    className
+  }) => {
     const content = highlight || text;
-    // Sanitize HTML to prevent XSS attacks - only allow <mark> tags for highlighting
+
+    // If no highlight markup, return plain text
+    if (!content.includes('<mark>')) {
+      return <span className={className}>{content}</span>;
+    }
+
+    // Sanitize and parse the highlighted text
     const sanitized = DOMPurify.sanitize(content, {
       ALLOWED_TAGS: ['mark'],
       ALLOWED_ATTR: [],
       KEEP_CONTENT: true,
     });
-    return { __html: sanitized };
+
+    // Split by mark tags and render safely
+    const parts = sanitized.split(/(<mark>.*?<\/mark>)/g);
+
+    return (
+      <span className={className}>
+        {parts.map((part, index) => {
+          if (part.startsWith('<mark>') && part.endsWith('</mark>')) {
+            const highlighted = part.replace(/<\/?mark>/g, '');
+            return <mark key={index}>{highlighted}</mark>;
+          }
+          return <span key={index}>{part}</span>;
+        })}
+      </span>
+    );
   };
 
   return (
@@ -305,23 +330,24 @@ function SearchResultsContent() {
                             </div>
 
                             {/* Title */}
-                            <h3
-                              className="font-montserrat text-lg font-semibold mb-2 text-[var(--ink-black)] group-hover:text-[var(--moura-teal)] transition-colors"
-                              dangerouslySetInnerHTML={renderHighlightedText(result.content.title, result.highlights?.title)}
-                            />
+                            <h3 className="font-montserrat text-lg font-semibold mb-2 text-[var(--ink-black)] group-hover:text-[var(--moura-teal)] transition-colors">
+                              <HighlightedText
+                                text={result.content.title}
+                                highlight={result.highlights?.title}
+                              />
+                            </h3>
 
                             {/* Description/Excerpt */}
-                            <div
-                              className="font-lora text-sm text-[var(--charcoal-wash)] mb-3 line-clamp-2"
-                              dangerouslySetInnerHTML={renderHighlightedText(
-                                result.content.description ||
-                                ('abstract' in result.content ? result.content.abstract :
-                                 'excerpt' in result.content ? result.content.excerpt :
-                                 'artistStatement' in result.content ? result.content.artistStatement :
-                                 'Brief description coming soon...'),
-                                result.highlights?.description || result.highlights?.content
-                              )}
-                            />
+                            <div className="font-lora text-sm text-[var(--charcoal-wash)] mb-3 line-clamp-2">
+                              <HighlightedText
+                                text={result.content.description ||
+                                  ('abstract' in result.content ? result.content.abstract :
+                                   'excerpt' in result.content ? result.content.excerpt :
+                                   'artistStatement' in result.content ? result.content.artistStatement :
+                                   'Brief description coming soon...')}
+                                highlight={result.highlights?.description || result.highlights?.content}
+                              />
+                            </div>
 
                             {/* Metadata */}
                             <div className="flex items-center gap-4 text-sm text-[var(--muted-foreground)]">

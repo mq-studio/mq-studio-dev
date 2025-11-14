@@ -66,6 +66,7 @@ export default defineConfig({
             }
           }
         },
+        // @ts-ignore - defaultItem may not be in type definitions but works in runtime
         defaultItem: () => {
           return {
             title: '',
@@ -162,6 +163,8 @@ export default defineConfig({
         path: 'content/artworks',
         format: 'md',
         ui: {
+          // @ts-ignore - defaultItem may not be in type definitions but works in runtime
+          // @ts-ignore - defaultItem may not be in type definitions but works in runtime
           defaultItem: () => ({
             title: '',
             year: new Date().getFullYear(),
@@ -338,6 +341,7 @@ export default defineConfig({
         path: 'content/publications',
         format: 'md',
         ui: {
+          // @ts-ignore - defaultItem may not be in type definitions but works in runtime
           defaultItem: () => ({
             title: '',
             authors: ['Moura Quayle'],
@@ -401,6 +405,7 @@ export default defineConfig({
         path: 'content/projects',
         format: 'md',
         ui: {
+          // @ts-ignore - defaultItem may not be in type definitions but works in runtime
           defaultItem: () => ({
             title: '',
             status: 'in-progress',

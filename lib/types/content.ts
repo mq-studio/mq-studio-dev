@@ -81,6 +81,8 @@ export interface Musing extends BaseContent {
   readingTime?: number; // in minutes
   relatedContent?: string[]; // IDs of related content
   davidNote?: string; // Marginalia from David Fushtey
+  legacy?: boolean; // Flag for archive posts from WordPress
+  originalUrl?: string; // Original WordPress URL for legacy posts
 }
 
 // Project (Landscape design, governance initiatives, collaborations)
