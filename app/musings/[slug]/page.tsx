@@ -8,6 +8,7 @@ import { isMusing, Musing } from '@/lib/types/content';
 import VideoPlayer from '@/components/musings/VideoPlayer';
 import CommentSection from '@/components/musings/CommentSection';
 import ShareButtons from '@/components/musings/ShareButtons';
+import { LegacyMusingBadge } from '@/components/LegacyMusingBadge';
 
 interface PageProps {
   params: {
@@ -102,6 +103,14 @@ export default async function MusingPage({ params }: PageProps) {
       </header>
 
       <main className="max-w-4xl mx-auto px-6 py-12">
+        {/* Legacy Badge for archived posts */}
+        {musing.legacy && (
+          <LegacyMusingBadge
+            originalDate={musing.date}
+            originalUrl={musing.originalUrl}
+          />
+        )}
+
         {/* Category Badge */}
         <div className="mb-4">
           <span

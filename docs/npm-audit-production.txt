@@ -1,0 +1,129 @@
+npm warn config production Use `--omit=dev` instead.
+# npm audit report
+
+ai  <=5.0.51
+Severity: moderate
+Vercel’s AI SDK's filetype whitelists can be bypassed when uploading files - https://github.com/advisories/GHSA-rwvc-j5jr-mgvh
+Depends on vulnerable versions of jsondiffpatch
+fix available via `npm audit fix --force`
+Will install @browserbasehq/stagehand@3.0.1, which is a breaking change
+node_modules/ai
+  @browserbasehq/stagehand  2.1.1-alpha-b5ca00a25ad0c33a5f4d3198e1bc59edb9956e7c - 2.5.3-alpha-fc06d40b339fed7efc2127df76a9b942b9d8f07d
+  Depends on vulnerable versions of ai
+  node_modules/@browserbasehq/stagehand
+
+dompurify  <=3.2.3
+Severity: critical
+DOMPurify allows tampering by prototype pollution - https://github.com/advisories/GHSA-mmhx-hmjr-r674
+DOMPurify allows Cross-site Scripting (XSS) - https://github.com/advisories/GHSA-vhxf-7vqr-mrjg
+DOMPurify vulnerable to tampering by prototype polution - https://github.com/advisories/GHSA-p3vf-v8qc-cwcr
+DOMpurify has a nesting-based mXSS - https://github.com/advisories/GHSA-gx9m-whjm-85jf
+fix available via `npm audit fix --force`
+Will install tinacms@2.1.1, which is a breaking change
+node_modules/dompurify
+  mermaid  <=10.9.2
+  Depends on vulnerable versions of dompurify
+  node_modules/mermaid
+    tinacms  <=0.0.0-feaa40f-20241112045116 || 0.4.0-dev.0 || >=0.50.0
+    Depends on vulnerable versions of @tinacms/search
+    Depends on vulnerable versions of lodash.set
+    Depends on vulnerable versions of mermaid
+    node_modules/tinacms
+      @tinacms/app  <=0.0.22 || 1.2.0 - 1.2.45 || >=2.1.0
+      Depends on vulnerable versions of tinacms
+      node_modules/@tinacms/app
+        @tinacms/cli  <=0.0.0-feaa40f-20241112045116 || >=0.60.6
+        Depends on vulnerable versions of @tinacms/app
+        Depends on vulnerable versions of @tinacms/graphql
+        Depends on vulnerable versions of @tinacms/search
+        Depends on vulnerable versions of @vitejs/plugin-react
+        Depends on vulnerable versions of esbuild
+        Depends on vulnerable versions of tinacms
+        Depends on vulnerable versions of vite
+        node_modules/@tinacms/cli
+
+esbuild  <=0.24.2
+Severity: moderate
+esbuild enables any website to send any requests to the development server and read the response - https://github.com/advisories/GHSA-67mh-4wv8-2f99
+fix available via `npm audit fix --force`
+Will install @tinacms/cli@0.60.5, which is a breaking change
+node_modules/esbuild
+node_modules/vite/node_modules/esbuild
+  vite  <=6.1.6
+  Depends on vulnerable versions of esbuild
+  node_modules/vite
+    @vitejs/plugin-react  2.0.0-alpha.0 - 4.1.1
+    Depends on vulnerable versions of vite
+    node_modules/@vitejs/plugin-react
+
+fast-redact  *
+fast-redact vulnerable to prototype pollution - https://github.com/advisories/GHSA-ffrw-9mx8-89p8
+fix available via `npm audit fix`
+node_modules/fast-redact
+  pino  5.0.0-rc.1 - 9.11.0
+  Depends on vulnerable versions of fast-redact
+  node_modules/pino
+
+jsondiffpatch  <0.7.2
+Severity: moderate
+jsondiffpatch is vulnerable to Cross-site Scripting (XSS) via HtmlFormatter::nodeBegin - https://github.com/advisories/GHSA-33vc-wfww-vjfv
+fix available via `npm audit fix --force`
+Will install @browserbasehq/stagehand@3.0.1, which is a breaking change
+node_modules/jsondiffpatch
+
+jsonpath-plus  <=10.2.0
+Severity: critical
+JSONPath Plus Remote Code Execution (RCE) Vulnerability - https://github.com/advisories/GHSA-pppg-cpfq-h7wr
+JSONPath Plus allows Remote Code Execution - https://github.com/advisories/GHSA-hw8r-x6gr-5gjp
+fix available via `npm audit fix --force`
+Will install @tinacms/cli@0.60.5, which is a breaking change
+node_modules/jsonpath-plus
+  @tinacms/graphql  >=1.2.0
+  Depends on vulnerable versions of jsonpath-plus
+  Depends on vulnerable versions of lodash.set
+  node_modules/@tinacms/graphql
+    @tinacms/search  *
+    Depends on vulnerable versions of @tinacms/graphql
+    node_modules/@tinacms/search
+
+lodash.set  *
+Severity: high
+Prototype Pollution in lodash - https://github.com/advisories/GHSA-p6mc-m468-83gw
+fix available via `npm audit fix --force`
+Will install tinacms@2.1.1, which is a breaking change
+node_modules/lodash.set
+
+
+next  0.9.9 - 14.2.31
+Severity: critical
+Next.js Cache Poisoning - https://github.com/advisories/GHSA-gp8f-8m3g-qvj9
+Denial of Service condition in Next.js image optimization - https://github.com/advisories/GHSA-g77x-44xx-532m
+Next.js Allows a Denial of Service (DoS) with Server Actions - https://github.com/advisories/GHSA-7m27-7ghc-44w9
+Information exposure in Next.js dev server due to lack of origin verification - https://github.com/advisories/GHSA-3h52-269p-cp9r
+Next.js Affected by Cache Key Confusion for Image Optimization API Routes - https://github.com/advisories/GHSA-g5qg-72qw-gw5v
+Next.js authorization bypass vulnerability - https://github.com/advisories/GHSA-7gfc-8cq8-jh5f
+Next.js Improper Middleware Redirect Handling Leads to SSRF - https://github.com/advisories/GHSA-4342-x723-ch2f
+Next.js Content Injection Vulnerability for Image Optimization - https://github.com/advisories/GHSA-xv57-4mr9-wg8v
+Next.js Race Condition to Cache Poisoning - https://github.com/advisories/GHSA-qpjv-v59x-3qc4
+Authorization Bypass in Next.js Middleware - https://github.com/advisories/GHSA-f82v-jwr5-mffw
+fix available via `npm audit fix --force`
+Will install next@14.2.33, which is outside the stated dependency range
+node_modules/next
+
+playwright  <1.55.1
+Severity: high
+Playwright downloads and installs browsers without verifying the authenticity of the SSL certificate - https://github.com/advisories/GHSA-7mvr-c777-76hp
+fix available via `npm audit fix`
+node_modules/playwright
+  @playwright/test  0.9.7 - 0.1112.0-alpha2 || 1.38.0-alpha-1692262648000 - 1.55.1-beta-1758616458000
+  Depends on vulnerable versions of playwright
+  node_modules/@playwright/test
+
+
+20 vulnerabilities (4 low, 4 moderate, 5 high, 7 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force

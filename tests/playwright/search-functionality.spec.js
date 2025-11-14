@@ -98,8 +98,16 @@ test.describe('Search Functionality Tests', () => {
     ]);
 
     // Wait for navigation - use waitForURL for Next.js client-side routing
-    await page.waitForURL(/\/(search|\?q=|query=|s=)/, { timeout: 5000 }).catch(() => {});
-    await page.waitForLoadState('networkidle');
+    // Using proper waitForURL syntax with pattern matching
+    await page.waitForURL(url => {
+      return url.includes('/search') ||
+             url.includes('?q=') ||
+             url.includes('query=') ||
+             url.includes('s=');
+    }, { timeout: 10000 }).catch(() => {
+      console.log('Navigation timeout - page may not have navigated to search results');
+    });
+    await page.waitForLoadState('networkidle', { timeout: 10000 });
 
     // Check if we're on search results page
     const currentUrl = page.url();

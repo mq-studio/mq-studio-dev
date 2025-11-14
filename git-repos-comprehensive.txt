@@ -1,0 +1,46 @@
+Size: 2.3G
+Last commit: 2025-11-07 14:04:44 -0800
+Remote: https://github.com/mq-studio/mq-studio-dev.git
+Current branch: main
+Uncommitted changes: 3 files
+Tags: 0
+
+Repository: /home/ichardart/code/clients/shufa-and-leadership
+=================================
+Size: 2.3G
+Last commit: 2025-11-07 14:04:44 -0800
+Remote: https://github.com/mq-studio/mq-studio-dev.git
+Current branch: main
+Uncommitted changes: 3 files
+
+Repository: /home/ichardart/code/clients/shufa-and-leadership
+=================================
+Size: 2.3G
+Last commit: 2025-11-07 14:04:44 -0800
+Remote: https://github.com/mq-studio/mq-studio-dev.git
+Current branch: main
+Uncommitted changes: 3 files
+
+Repository: /home/ichardart/code/clients/moura_quayle/website-mq-studio/.uv-cache/git-v0/checkouts/0b2d89e6cfcd4f8e/d90cc16
+=================================
+
+Repository: /home/ichardart/code/clients/moura_quayle/website-mq-studio/.uv-cache/git-v0/checkouts/0b2d89e6cfcd4f8e/d90cc16
+=================================
+Size: 5.1M
+Last commit: 2025-09-18 11:22:30 -0700
+Remote: /home/ichardart/code/clients/website-mq-studio/.uv-cache/git-v0/db/0b2d89e6cfcd4f8e
+Current branch: main
+Uncommitted changes: 4 files
+
+[40] Repository: /home/ichardart/code/clients/moura_quayle/website-mq-studio
+=================================
+Size: 2.3G
+Last commit: 2025-11-07 14:04:44 -0800
+Remote: https://github.com/mq-studio/mq-studio-dev.git
+Current branch: main
+Uncommitted changes: 3 files ⚠️
+
+[41] Repository: /home/ichardart/code/clients/moura_quayle/website-mq-studio/.uv-cache/git-v0/checkouts/0b2d89e6cfcd4f8e/d90cc16
+Size: 5.1M
+Last commit: 2025-09-18 11:22:30 -0700
+Remote: /home/ichardart/code/clients/website-mq-studio/.uv-cache/git-v0/db/0b2d89e6cfcd4f8e

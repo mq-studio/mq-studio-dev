@@ -75,8 +75,8 @@ export function validatePasswordStrength(password: string): boolean {
 /**
  * Validates content type
  */
-export function validateContentType(type: string): type is 'musing' | 'artwork' | 'publication' | 'project' {
-  return ['musing', 'artwork', 'publication', 'project'].includes(type);
+export function validateContentType(type: string): type is 'musings' | 'artworks' | 'publications' | 'projects' {
+  return ['musings', 'artworks', 'publications', 'projects'].includes(type);
 }
 
 /**
