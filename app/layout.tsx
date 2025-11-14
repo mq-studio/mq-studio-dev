@@ -71,6 +71,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* DNS prefetch for potential future requests */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        {/* RSS Feed for auto-discovery */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Moura Quayle - Musings RSS Feed"
+          href="/musings/feed.xml"
+        />
       </head>
       <body className={`${montserrat.variable} ${lora.variable} font-lora antialiased flex flex-col min-h-screen`}>
         {/* Skip to main content link for keyboard users */}

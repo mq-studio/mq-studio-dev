@@ -18,6 +18,7 @@ const navigationLinks: FooterLink[] = [
   { label: 'Press', href: '/press' },
   { label: 'Projects', href: '/projects' },
   { label: 'Search', href: '/search' },
+  { label: 'RSS', href: '/musings/feed.xml' },
 ];
 
 const socialLinks: SocialLink[] = [
