@@ -30,16 +30,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const pageUrl = `${baseUrl}/musings/${params.slug}`;
   const description = content.excerpt || content.description || `Read "${content.title}" by Moura Quayle`;
 
-  // Use featured image if available, otherwise default og image
-  const imageUrl = content.featuredImage
-    ? `${baseUrl}${content.featuredImage}`
-    : `${baseUrl}/images/og-default.jpg`;
+  // Default OG image (musings don't have featured images currently)
+  const imageUrl = `${baseUrl}/images/og-default.jpg`;
 
   return {
     title: `${content.title} | Musings | MQ Studio`,
     description,
     authors: [{ name: 'Moura Quayle' }],
-    keywords: content.tags ? content.tags.split(',').map(t => t.trim()) : ['Moura Quayle', 'musings', content.category],
+    keywords: content.tags && content.tags.length > 0 ? content.tags : ['Moura Quayle', 'musings', content.category],
     openGraph: {
       title: content.title,
       description,
@@ -49,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       publishedTime: content.date,
       authors: ['Moura Quayle'],
-      tags: content.tags ? content.tags.split(',').map(t => t.trim()) : [content.category],
+      tags: content.tags && content.tags.length > 0 ? content.tags : [content.category],
       images: [
         {
           url: imageUrl,

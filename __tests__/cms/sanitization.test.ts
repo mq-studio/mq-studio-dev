@@ -54,9 +54,7 @@ describe('Sanitization Utilities', () => {
 
     it('should handle empty or null content', () => {
       expect(sanitizeContent('')).toBe('');
-      // @ts-expect-error Testing invalid input
       expect(sanitizeContent(null)).toBe('');
-      // @ts-expect-error Testing invalid input
       expect(sanitizeContent(undefined)).toBe('');
     });
   });
@@ -83,7 +81,6 @@ describe('Sanitization Utilities', () => {
 
     it('should handle empty or null strings', () => {
       expect(sanitizeMetadataString('')).toBe('');
-      // @ts-expect-error Testing invalid input
       expect(sanitizeMetadataString(null)).toBe('');
     });
   });

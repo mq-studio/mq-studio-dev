@@ -3,7 +3,7 @@
  * Tests CRUD operations and security measures
  */
 
-import { ContentService } from '../../lib/services/ContentService';
+import { ContentService } from '../../lib/content/content-service';
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -57,14 +57,12 @@ describe('ContentService', () => {
 
   describe('Security - Invalid Content Type', () => {
     it('should reject invalid content type in getContentBySlug', async () => {
-      // @ts-expect-error Testing invalid input
       await expect(
         service.getContentBySlug('invalid-type', 'test-slug')
       ).rejects.toThrow('Invalid content type');
     });
 
     it('should reject invalid content type in createContent', async () => {
-      // @ts-expect-error Testing invalid input
       await expect(
         service.createContent('invalid-type', 'test', {}, 'content')
       ).rejects.toThrow('Invalid content type');
@@ -220,7 +218,6 @@ Hello <script>alert("XSS")</script> World`);
         service.createContent(
           'musing',
           'test',
-          // @ts-expect-error Testing invalid input
           { status: 'invalid-status' },
           'Content'
         )

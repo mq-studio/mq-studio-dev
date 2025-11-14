@@ -29,7 +29,6 @@ describe('Password Utilities', () => {
     });
 
     it('should reject non-string password', async () => {
-      // @ts-expect-error Testing invalid input
       await expect(hashPassword(null)).rejects.toThrow('Password must be a non-empty string');
     });
   });

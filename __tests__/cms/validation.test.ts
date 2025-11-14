@@ -41,9 +41,7 @@ describe('Validation Utilities', () => {
 
     it('should reject empty or null slugs', () => {
       expect(validateSlug('')).toBe(false);
-      // @ts-expect-error Testing invalid input
       expect(validateSlug(null)).toBe(false);
-      // @ts-expect-error Testing invalid input
       expect(validateSlug(undefined)).toBe(false);
     });
 
@@ -69,7 +67,6 @@ describe('Validation Utilities', () => {
 
     it('should reject empty or null emails', () => {
       expect(validateEmail('')).toBe(false);
-      // @ts-expect-error Testing invalid input
       expect(validateEmail(null)).toBe(false);
     });
 
@@ -108,7 +105,6 @@ describe('Validation Utilities', () => {
 
     it('should reject empty or null passwords', () => {
       expect(validatePasswordStrength('')).toBe(false);
-      // @ts-expect-error Testing invalid input
       expect(validatePasswordStrength(null)).toBe(false);
     });
   });
@@ -125,7 +121,6 @@ describe('Validation Utilities', () => {
       expect(validateContentType('invalid')).toBe(false);
       expect(validateContentType('musings')).toBe(false);
       expect(validateContentType('')).toBe(false);
-      // @ts-expect-error Testing invalid input
       expect(validateContentType(null)).toBe(false);
     });
   });
@@ -141,7 +136,6 @@ describe('Validation Utilities', () => {
       expect(validateContentStatus('invalid')).toBe(false);
       expect(validateContentStatus('pending')).toBe(false);
       expect(validateContentStatus('')).toBe(false);
-      // @ts-expect-error Testing invalid input
       expect(validateContentStatus(null)).toBe(false);
     });
   });
