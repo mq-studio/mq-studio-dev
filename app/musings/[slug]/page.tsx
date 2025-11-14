@@ -16,7 +16,7 @@ interface PageProps {
   };
 }
 
-// Generate metadata for SEO
+// Generate metadata for SEO and social sharing
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const content = await contentService.getContentBySlug(params.slug);
 
@@ -26,15 +26,48 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mouraquayle.ca';
+  const pageUrl = `${baseUrl}/musings/${params.slug}`;
+  const description = content.excerpt || content.description || `Read "${content.title}" by Moura Quayle`;
+
+  // Use featured image if available, otherwise default og image
+  const imageUrl = content.featuredImage
+    ? `${baseUrl}${content.featuredImage}`
+    : `${baseUrl}/images/og-default.jpg`;
+
   return {
     title: `${content.title} | Musings | MQ Studio`,
-    description: content.excerpt || content.description,
+    description,
     authors: [{ name: 'Moura Quayle' }],
+    keywords: content.tags ? content.tags.split(',').map(t => t.trim()) : ['Moura Quayle', 'musings', content.category],
     openGraph: {
       title: content.title,
-      description: content.excerpt || content.description,
+      description,
+      url: pageUrl,
+      siteName: 'MQ Studio - Moura Quayle',
+      locale: 'en_US',
       type: 'article',
       publishedTime: content.date,
+      authors: ['Moura Quayle'],
+      tags: content.tags ? content.tags.split(',').map(t => t.trim()) : [content.category],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: content.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: content.title,
+      description,
+      images: [imageUrl],
+      creator: '@mouraquayle',
+    },
+    alternates: {
+      canonical: pageUrl,
     },
   };
 }
