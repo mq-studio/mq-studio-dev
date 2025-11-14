@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "tinacms dev -c \"next dev --hostname 0.0.0.0 --port 3100\"",
     "dev:1p": "op run --env-file=\"./.env.1password.template\" -- npm run dev",
-    "build": "tinacms build && next build",
+    "build": "npm run build:tinacms && next build",
+    "build:tinacms": "node scripts/build-tinacms.js",
+    "build:simple": "next build",
     "build:1p": "op run --env-file=\"./.env.1password.template\" -- npm run build",
     "start": "next start",
     "lint": "next lint",
