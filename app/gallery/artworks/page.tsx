@@ -42,7 +42,8 @@ function ArtworkGalleryContent() {
     try {
       const response = await fetch('/api/content?type=artwork', {
         method: 'GET',
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' },
+        next: { revalidate: 300 }
       });
 
       if (response.ok) {

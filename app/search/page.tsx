@@ -49,7 +49,7 @@ function SearchResultsContent() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`/api/content?search=${encodeURIComponent(searchQuery)}`);
+      const response = await fetch(`/api/content?search=${encodeURIComponent(searchQuery)}`, { cache: 'no-store' });
       if (!response.ok) {
         throw new Error('Failed to fetch search results');
       }

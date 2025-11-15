@@ -50,6 +50,7 @@ export default function SearchBar({
     try {
       const response = await fetch(`/api/content?search=${encodeURIComponent(searchQuery)}`, {
         signal: abortControllerRef.current.signal,
+        cache: 'no-store',
       });
       if (response.ok) {
         const results: SearchResult[] = await response.json();

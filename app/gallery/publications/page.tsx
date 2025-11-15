@@ -21,7 +21,8 @@ function PublicationGalleryContent() {
     try {
       const response = await fetch('/api/content?type=publication', {
         method: 'GET',
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' },
+        next: { revalidate: 300 }
       });
 
       console.log('[PublicationGallery] Response status: ' + response.status);

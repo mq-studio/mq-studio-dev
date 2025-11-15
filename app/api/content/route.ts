@@ -4,6 +4,9 @@ import { contentService } from '@/lib/content/content-service';
 import { searchQuerySchema, slugSchema, contentApiRequestSchema, formatValidationError } from '@/lib/validation/schemas';
 import { contentRateLimiter, checkRateLimit } from '@/lib/rate-limit';
 
+// Force dynamic rendering for API endpoints (handles dynamic queries, rate limiting, user-specific data)
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   // Apply rate limiting (60 requests per minute allows for autocomplete search)
   const rateLimitResult = await checkRateLimit(request, contentRateLimiter, 60);

@@ -152,3 +152,6 @@ export async function GET() {
 
 // Cache the feed for 1 hour in production
 export const revalidate = 3600;
+
+// Explicitly configure static rendering for RSS feed generation (Next.js 15)
+export const dynamic = 'force-static';
