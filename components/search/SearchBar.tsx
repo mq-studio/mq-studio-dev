@@ -28,8 +28,8 @@ export default function SearchBar({
   const router = useRouter();
 
   // Debounced search function with abort controller
-  const debounceTimeout = useRef<NodeJS.Timeout>();
-  const abortControllerRef = useRef<AbortController>();
+  const debounceTimeout = useRef<NodeJS.Timeout | undefined>(undefined);
+  const abortControllerRef = useRef<AbortController | undefined>(undefined);
 
   const fetchSuggestions = useCallback(async (searchQuery: string) => {
     if (searchQuery.trim().length < 2) {
