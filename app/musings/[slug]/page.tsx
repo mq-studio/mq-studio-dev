@@ -11,14 +11,15 @@ import ShareButtons from '@/components/musings/ShareButtons';
 import { LegacyMusingBadge } from '@/components/LegacyMusingBadge';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Generate metadata for SEO and social sharing
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const content = await contentService.getContentBySlug(params.slug);
+  const resolvedParams = await params;
+  const content = await contentService.getContentBySlug(resolvedParams.slug);
 
   if (!content || !isMusing(content)) {
     return {
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mouraquayle.ca';
-  const pageUrl = `${baseUrl}/musings/${params.slug}`;
+  const pageUrl = `${baseUrl}/musings/${resolvedParams.slug}`;
   const description = content.excerpt || content.description || `Read "${content.title}" by Moura Quayle`;
 
   // Default OG image (musings don't have featured images currently)
@@ -71,7 +72,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function MusingPage({ params }: PageProps) {
-  const content = await contentService.getContentBySlug(params.slug);
+  const resolvedParams = await params;
+  const content = await contentService.getContentBySlug(resolvedParams.slug);
 
   if (!content || !isMusing(content)) {
     notFound();

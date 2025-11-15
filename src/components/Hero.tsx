@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import Link from 'next/link';
 import { TOKENS } from '../design/tokens';
 
 export interface HeroProps {
@@ -31,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
 
         {/* Current Artwork - FEELING pathway */}
         <div data-testid="hero-artwork" style={{ padding: TOKENS.spacing.md }}>
-          <a
+          <Link
             href="/artworks"
             style={{
               textDecoration: 'none',
@@ -68,12 +69,12 @@ export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
             <p style={{ fontSize: '0.9rem', color: TOKENS.colors.charcoalWash }}>
               Latest piece exploring the fluid boundaries between thought and feeling...
             </p>
-          </a>
+          </Link>
         </div>
 
         {/* Recent Writing - THINKING pathway */}
         <div data-testid="hero-writing" style={{ padding: TOKENS.spacing.md }}>
-          <a
+          <Link
             href="/publications"
             style={{
               textDecoration: 'none',
@@ -101,12 +102,12 @@ export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
             <p style={{ fontSize: '0.9rem', color: TOKENS.colors.charcoalWash }}>
               From &quot;Boundaries and Belonging&quot; - <strong>Read more...</strong>
             </p>
-          </a>
+          </Link>
         </div>
 
         {/* Today's Reflection - DOING pathway */}
         <div data-testid="hero-reflection" style={{ padding: TOKENS.spacing.md }}>
-          <a
+          <Link
             href="/musings"
             style={{
               textDecoration: 'none',
@@ -133,7 +134,7 @@ export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
             <p style={{ fontSize: '0.8rem', color: TOKENS.colors.charcoalWash }}>
               Current work-in-progress • September 2024
             </p>
-          </a>
+          </Link>
         </div>
       </div>
 

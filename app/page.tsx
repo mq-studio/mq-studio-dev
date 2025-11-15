@@ -8,9 +8,9 @@ import Header from '@/components/header/Header';
 import { contentService } from '@/lib/content/content-service';
 
 // Lazy-load SearchBar component to reduce initial bundle
+// Note: Next.js 15 removed ssr:false support in Server Components
 const SearchBar = dynamic(() => import('@/components/search/SearchBar'), {
   loading: () => <SearchBarSkeleton />,
-  ssr: false, // SearchBar has client-side interactions, load after hydration
 });
 
 // Server-side data fetching with ISR

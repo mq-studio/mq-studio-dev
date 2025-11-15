@@ -2,10 +2,10 @@ import { NextResponse } from 'next/server';
 import { ImageResponse } from 'next/og';
 
 type Params = {
-  params: {
+  params: Promise<{
     width: string;
     height: string;
-  };
+  }>;
 };
 
 const MAX_DIMENSION = 1600;
@@ -32,8 +32,9 @@ function parseDimension(value: string): number | null {
 }
 
 export async function GET(_request: Request, { params }: Params) {
-  const width = parseDimension(params.width);
-  const height = parseDimension(params.height);
+  const resolvedParams = await params;
+  const width = parseDimension(resolvedParams.width);
+  const height = parseDimension(resolvedParams.height);
 
   if (!width || !height) {
     return NextResponse.json({ error: 'Invalid placeholder dimensions' }, { status: 400 });

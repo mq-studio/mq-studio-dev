@@ -119,17 +119,17 @@ export default function ProjectsPage() {
               </div>
             </div>
             <nav className="font-montserrat text-sm">
-              <a href="/gallery/artworks" className="hover:text-[var(--moura-teal)] transition-colors">Artworks</a>
+              <Link href="/gallery/artworks" className="hover:text-[var(--moura-teal)] transition-colors">Artworks</Link>
               <span className="mx-2">·</span>
-              <a href="/gallery/publications" className="hover:text-[var(--moura-teal)] transition-colors">Publications</a>
+              <Link href="/gallery/publications" className="hover:text-[var(--moura-teal)] transition-colors">Publications</Link>
               <span className="mx-2">·</span>
-              <a href="/musings" className="hover:text-[var(--moura-teal)] transition-colors">Musings</a>
+              <Link href="/musings" className="hover:text-[var(--moura-teal)] transition-colors">Musings</Link>
               <span className="mx-2">·</span>
-              <a href="/press" className="hover:text-[var(--moura-teal)] transition-colors">Press</a>
+              <Link href="/press" className="hover:text-[var(--moura-teal)] transition-colors">Press</Link>
               <span className="mx-2">·</span>
-              <a href="/projects" className="text-[var(--moura-teal)]">Projects</a>
+              <Link href="/projects" className="text-[var(--moura-teal)]">Projects</Link>
               <span className="mx-2">·</span>
-              <a href="/search" className="hover:text-[var(--moura-teal)] transition-colors">Search</a>
+              <Link href="/search" className="hover:text-[var(--moura-teal)] transition-colors">Search</Link>
             </nav>
           </div>
         </div>

@@ -8,14 +8,15 @@ import CitationSection from '@/components/publications/CitationSection';
 import { resolvePublisherLink, getPublisherButtonText } from '@/lib/utils/publisherResolver';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const content = await contentService.getContentBySlug(params.slug);
+  const resolvedParams = await params;
+  const content = await contentService.getContentBySlug(resolvedParams.slug);
 
   if (!content || !isPublication(content)) {
     return {
@@ -37,7 +38,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function PublicationPage({ params }: PageProps) {
-  const content = await contentService.getContentBySlug(params.slug);
+  const resolvedParams = await params;
+  const content = await contentService.getContentBySlug(resolvedParams.slug);
 
   if (!content || !isPublication(content)) {
     notFound();
