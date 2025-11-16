@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   /* MQ Studio Colors - Primary Palette */
@@ -106,29 +104,31 @@ mark {
 }
 
 /* Publications View Transitions */
-.publications-grid {
-  transition: all 200ms ease-in-out;
-}
+@layer components {
+  .publications-grid {
+    transition: all 200ms ease-in-out;
+  }
 
-.publications-grid--full {
-  @apply grid-cols-1 gap-8;
-}
+  .publications-grid--full {
+    @apply grid-cols-1 gap-8;
+  }
 
-.publications-grid--moderate {
-  @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
-}
+  .publications-grid--moderate {
+    @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
 
-.publications-grid--compact {
-  @apply grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4;
-}
+  .publications-grid--compact {
+    @apply grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4;
+  }
 
-/* Publication Card Transitions */
-.publication-card {
-  transition: all 200ms ease-in-out;
-}
+  /* Publication Card Transitions */
+  .publication-card {
+    transition: all 200ms ease-in-out;
+  }
 
-.publication-card:hover {
-  transform: translateY(-2px);
+  .publication-card:hover {
+    transform: translateY(-2px);
+  }
 }
 
 /* Line Clamp Utilities */
@@ -161,7 +161,7 @@ html {
 /* Print Styles - Default to Full View */
 @media print {
   .publications-grid {
-    @apply grid-cols-1 !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
   }
 
   .publication-card {
