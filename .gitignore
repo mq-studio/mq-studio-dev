@@ -77,3 +77,8 @@ public/images/originals/
 # Logs
 *.log
 logs/
+
+# Test artifacts (buildable)
+test-results/
+playwright-report/
+.last-run.json

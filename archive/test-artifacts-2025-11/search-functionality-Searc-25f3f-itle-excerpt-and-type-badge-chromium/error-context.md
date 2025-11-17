@@ -1,0 +1,1546 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "MQ STUDIO Feeling · Thinking · Doing" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7] [cursor=pointer]: MQ STUDIO
+          - generic [ref=e9] [cursor=pointer]: Feeling · Thinking · Doing
+        - navigation [ref=e10]:
+          - link "Artworks" [ref=e11] [cursor=pointer]:
+            - /url: /gallery/artworks
+          - generic [ref=e12]: ·
+          - link "Publications" [ref=e13] [cursor=pointer]:
+            - /url: /gallery/publications
+          - generic [ref=e14]: ·
+          - link "Musings" [ref=e15] [cursor=pointer]:
+            - /url: /musings
+          - generic [ref=e16]: ·
+          - link "Press" [ref=e17] [cursor=pointer]:
+            - /url: /press
+          - generic [ref=e18]: ·
+          - link "Projects" [ref=e19] [cursor=pointer]:
+            - /url: /projects
+          - generic [ref=e20]: ·
+          - link "Search" [ref=e21] [cursor=pointer]:
+            - /url: /search
+    - main [ref=e22]:
+      - generic [ref=e23]:
+        - heading "Search MQ Studio" [level=1] [ref=e24]
+        - generic [ref=e27]:
+          - img [ref=e28]
+          - searchbox "Search content" [ref=e30]
+          - button "Submit search" [ref=e31] [cursor=pointer]: Search
+      - paragraph [ref=e33]:
+        - text: 80 results for “
+        - generic [ref=e34]: landscape
+        - text: ”
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - heading "Publications (7)" [level=2] [ref=e37]:
+            - text: Publications
+            - generic [ref=e38]: (7)
+          - generic [ref=e39]:
+            - link [ref=e40] [cursor=pointer]:
+              - /url: /publications/landscape-policy-framework
+              - article [ref=e41] [cursor=pointer]:
+                - generic [ref=e42] [cursor=pointer]:
+                  - generic [ref=e43] [cursor=pointer]:
+                    - generic [ref=e45] [cursor=pointer]: PUBLICATION
+                    - 'heading "Landscape Architecture and Public Policy: A Framework for Integration" [level=3] [ref=e46] [cursor=pointer]':
+                      - mark [ref=e47] [cursor=pointer]: Landscape
+                      - text: "Architecture and Public Policy: A Framework for Integration"
+                    - generic [ref=e48] [cursor=pointer]:
+                      - text: This paper proposes a comprehensive framework for integrating
+                      - mark [ref=e49] [cursor=pointer]: landscape
+                      - text: architectural principles into public policy development. Through case studies from multiple jurisdictions in North America and E
+                    - generic [ref=e50] [cursor=pointer]:
+                      - generic [ref=e51] [cursor=pointer]: November 19, 2023
+                      - generic [ref=e52] [cursor=pointer]: ·
+                      - generic [ref=e53] [cursor=pointer]:
+                        - generic [ref=e54] [cursor=pointer]: landscape architecture
+                        - generic [ref=e55] [cursor=pointer]: policy
+                        - generic [ref=e56] [cursor=pointer]: governance
+                        - generic [ref=e57] [cursor=pointer]: "+2"
+                  - img [ref=e58] [cursor=pointer]
+            - link [ref=e60] [cursor=pointer]:
+              - /url: /publications/landscape-urbanism-climate-resilience
+              - article [ref=e61] [cursor=pointer]:
+                - generic [ref=e62] [cursor=pointer]:
+                  - generic [ref=e63] [cursor=pointer]:
+                    - generic [ref=e64] [cursor=pointer]:
+                      - generic [ref=e65] [cursor=pointer]: PUBLICATION
+                      - generic [ref=e66] [cursor=pointer]: FEATURED
+                    - 'heading "Landscape Urbanism and Climate Resilience: Designing for Uncertain Futures" [level=3] [ref=e67] [cursor=pointer]':
+                      - mark [ref=e68] [cursor=pointer]: Landscape
+                      - text: "Urbanism and Climate Resilience: Designing for Uncertain Futures"
+                    - generic [ref=e69] [cursor=pointer]:
+                      - text: As climate change accelerates,
+                      - mark [ref=e70] [cursor=pointer]: landscape
+                      - text: architects face the challenge of designing for increasingly uncertain futures. This paper examines how
+                      - mark [ref=e71] [cursor=pointer]: landscape
+                      - text: urbanism principles can be adapted to create r
+                    - generic [ref=e72] [cursor=pointer]:
+                      - generic [ref=e73] [cursor=pointer]: September 21, 2023
+                      - generic [ref=e74] [cursor=pointer]: ·
+                      - generic [ref=e75] [cursor=pointer]:
+                        - generic [ref=e76] [cursor=pointer]: landscape architecture
+                        - generic [ref=e77] [cursor=pointer]: climate change
+                        - generic [ref=e78] [cursor=pointer]: urban resilience
+                        - generic [ref=e79] [cursor=pointer]: "+2"
+                  - img [ref=e80] [cursor=pointer]
+            - link [ref=e82] [cursor=pointer]:
+              - /url: /publications/shaping-the-public-realm-qual-book
+              - article [ref=e83] [cursor=pointer]:
+                - generic [ref=e84] [cursor=pointer]:
+                  - generic [ref=e85] [cursor=pointer]:
+                    - generic [ref=e86] [cursor=pointer]:
+                      - generic [ref=e87] [cursor=pointer]: PUBLICATION
+                      - generic [ref=e88] [cursor=pointer]: FEATURED
+                    - 'heading "Shaping the Public Realm: Landscape Architecture, Urban Design, and Democratic Practice" [level=3] [ref=e89] [cursor=pointer]':
+                      - text: "Shaping the Public Realm:"
+                      - mark [ref=e90] [cursor=pointer]: Landscape
+                      - text: Architecture, Urban Design, and Democratic Practice
+                    - generic [ref=e91] [cursor=pointer]:
+                      - text: This comprehensive volume synthesizes decades of professional practice, teaching, and scholarship to articulate a vision of
+                      - mark [ref=e92] [cursor=pointer]: landscape
+                      - text: architecture and urban design as democratic practices. Moving beyo
+                    - generic [ref=e93] [cursor=pointer]:
+                      - generic [ref=e94] [cursor=pointer]: August 31, 2019
+                      - generic [ref=e95] [cursor=pointer]: ·
+                      - generic [ref=e96] [cursor=pointer]:
+                        - generic [ref=e97] [cursor=pointer]: landscape architecture
+                        - generic [ref=e98] [cursor=pointer]: urban design
+                        - generic [ref=e99] [cursor=pointer]: public space
+                        - generic [ref=e100] [cursor=pointer]: "+5"
+                  - img [ref=e101] [cursor=pointer]
+            - link [ref=e103] [cursor=pointer]:
+              - /url: /publications/greenways-publicways
+              - article [ref=e104] [cursor=pointer]:
+                - generic [ref=e105] [cursor=pointer]:
+                  - generic [ref=e106] [cursor=pointer]:
+                    - generic [ref=e108] [cursor=pointer]: PUBLICATION
+                    - 'heading "Greenways as Publicways: Reconnecting Communities Through Linear Parks" [level=3] [ref=e109] [cursor=pointer]'
+                    - generic [ref=e110] [cursor=pointer]:
+                      - text: This pioneering study examines greenways not merely as environmental corridors or recreational amenities but as public infrastructure that reconnects fragmented urban
+                      - mark [ref=e111] [cursor=pointer]: landscape
+                      - text: s and communities. Writt
+                    - generic [ref=e112] [cursor=pointer]:
+                      - generic [ref=e113] [cursor=pointer]: April 30, 1992
+                      - generic [ref=e114] [cursor=pointer]: ·
+                      - generic [ref=e115] [cursor=pointer]:
+                        - generic [ref=e116] [cursor=pointer]: greenways
+                        - generic [ref=e117] [cursor=pointer]: linear parks
+                        - generic [ref=e118] [cursor=pointer]: trails
+                        - generic [ref=e119] [cursor=pointer]: "+6"
+                  - img [ref=e120] [cursor=pointer]
+            - link [ref=e122] [cursor=pointer]:
+              - /url: /publications/writing-techniques-design-studio
+              - article [ref=e123] [cursor=pointer]:
+                - generic [ref=e124] [cursor=pointer]:
+                  - generic [ref=e125] [cursor=pointer]:
+                    - generic [ref=e127] [cursor=pointer]: PUBLICATION
+                    - 'heading "Using Writing Techniques in the Design Studio: Reflective Practice and Professional Development" [level=3] [ref=e128] [cursor=pointer]'
+                    - generic [ref=e129] [cursor=pointer]: Design education privileges visual thinking and graphic communication, often treating writing as supplementary to 'real' design work. This paper challenges that hierarchy, arguing that writing techniq
+                    - generic [ref=e130] [cursor=pointer]:
+                      - generic [ref=e131] [cursor=pointer]: May 31, 2014
+                      - generic [ref=e132] [cursor=pointer]: ·
+                      - generic [ref=e133] [cursor=pointer]:
+                        - generic [ref=e134] [cursor=pointer]: design pedagogy
+                        - generic [ref=e135] [cursor=pointer]: reflective practice
+                        - generic [ref=e136] [cursor=pointer]: landscape architecture education
+                        - generic [ref=e137] [cursor=pointer]: "+4"
+                  - img [ref=e138] [cursor=pointer]
+            - link [ref=e140] [cursor=pointer]:
+              - /url: /publications/growing-community
+              - article [ref=e141] [cursor=pointer]:
+                - generic [ref=e142] [cursor=pointer]:
+                  - generic [ref=e143] [cursor=pointer]:
+                    - generic [ref=e145] [cursor=pointer]: PUBLICATION
+                    - 'heading "Growing Community: The Practice and Politics of Place-Making" [level=3] [ref=e146] [cursor=pointer]'
+                    - generic [ref=e147] [cursor=pointer]:
+                      - text: What does it mean to 'grow' community, and what role do designed
+                      - mark [ref=e148] [cursor=pointer]: landscape
+                      - text: s play in that process? This paper explores community gardens and food-growing spaces not merely as sites of agricultural prod
+                    - generic [ref=e149] [cursor=pointer]:
+                      - generic [ref=e150] [cursor=pointer]: August 31, 2018
+                      - generic [ref=e151] [cursor=pointer]: ·
+                      - generic [ref=e152] [cursor=pointer]:
+                        - generic [ref=e153] [cursor=pointer]: community development
+                        - generic [ref=e154] [cursor=pointer]: place-making
+                        - generic [ref=e155] [cursor=pointer]: landscape architecture
+                        - generic [ref=e156] [cursor=pointer]: "+4"
+                  - img [ref=e157] [cursor=pointer]
+            - link [ref=e159] [cursor=pointer]:
+              - /url: /publications/realizing-public-ideas
+              - article [ref=e160] [cursor=pointer]:
+                - generic [ref=e161] [cursor=pointer]:
+                  - generic [ref=e162] [cursor=pointer]:
+                    - generic [ref=e164] [cursor=pointer]: PUBLICATION
+                    - 'heading "Realizing Public Ideas: The Role of Design in Democratic Practice" [level=3] [ref=e165] [cursor=pointer]'
+                    - generic [ref=e166] [cursor=pointer]: Examining how design methods enable democratic deliberation and collective imagination in public space projects.
+                    - generic [ref=e167] [cursor=pointer]:
+                      - generic [ref=e168] [cursor=pointer]: February 29, 2016
+                      - generic [ref=e169] [cursor=pointer]: ·
+                      - generic [ref=e170] [cursor=pointer]:
+                        - generic [ref=e171] [cursor=pointer]: public space
+                        - generic [ref=e172] [cursor=pointer]: democratic design
+                        - generic [ref=e173] [cursor=pointer]: participatory planning
+                        - generic [ref=e174] [cursor=pointer]: "+4"
+                  - img [ref=e175] [cursor=pointer]
+        - generic [ref=e177]:
+          - heading "Artworks (52)" [level=2] [ref=e178]:
+            - text: Artworks
+            - generic [ref=e179]: (52)
+          - generic [ref=e180]:
+            - link [ref=e181] [cursor=pointer]:
+              - /url: /artworks/landscape-design-06
+              - article [ref=e182] [cursor=pointer]:
+                - generic [ref=e183] [cursor=pointer]:
+                  - generic [ref=e184] [cursor=pointer]:
+                    - generic [ref=e186] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-06" [level=3] [ref=e187] [cursor=pointer]:
+                      - mark [ref=e188] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-06
+                    - generic [ref=e189] [cursor=pointer]:
+                      - mark [ref=e190] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e191] [cursor=pointer]:
+                      - generic [ref=e192] [cursor=pointer]: Invalid Date
+                      - generic [ref=e193] [cursor=pointer]: ·
+                      - generic [ref=e194] [cursor=pointer]:
+                        - generic [ref=e195] [cursor=pointer]: landscape architecture
+                        - generic [ref=e196] [cursor=pointer]: design
+                        - generic [ref=e197] [cursor=pointer]: planning
+                  - img [ref=e198] [cursor=pointer]
+            - link [ref=e200] [cursor=pointer]:
+              - /url: /artworks/landscape-design-07
+              - article [ref=e201] [cursor=pointer]:
+                - generic [ref=e202] [cursor=pointer]:
+                  - generic [ref=e203] [cursor=pointer]:
+                    - generic [ref=e205] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-07" [level=3] [ref=e206] [cursor=pointer]:
+                      - mark [ref=e207] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-07
+                    - generic [ref=e208] [cursor=pointer]:
+                      - mark [ref=e209] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e210] [cursor=pointer]:
+                      - generic [ref=e211] [cursor=pointer]: Invalid Date
+                      - generic [ref=e212] [cursor=pointer]: ·
+                      - generic [ref=e213] [cursor=pointer]:
+                        - generic [ref=e214] [cursor=pointer]: landscape architecture
+                        - generic [ref=e215] [cursor=pointer]: design
+                        - generic [ref=e216] [cursor=pointer]: planning
+                  - img [ref=e217] [cursor=pointer]
+            - link [ref=e219] [cursor=pointer]:
+              - /url: /artworks/landscape-design-08
+              - article [ref=e220] [cursor=pointer]:
+                - generic [ref=e221] [cursor=pointer]:
+                  - generic [ref=e222] [cursor=pointer]:
+                    - generic [ref=e224] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-08" [level=3] [ref=e225] [cursor=pointer]:
+                      - mark [ref=e226] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-08
+                    - generic [ref=e227] [cursor=pointer]:
+                      - mark [ref=e228] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e229] [cursor=pointer]:
+                      - generic [ref=e230] [cursor=pointer]: Invalid Date
+                      - generic [ref=e231] [cursor=pointer]: ·
+                      - generic [ref=e232] [cursor=pointer]:
+                        - generic [ref=e233] [cursor=pointer]: landscape architecture
+                        - generic [ref=e234] [cursor=pointer]: design
+                        - generic [ref=e235] [cursor=pointer]: planning
+                  - img [ref=e236] [cursor=pointer]
+            - link [ref=e238] [cursor=pointer]:
+              - /url: /artworks/landscape-design-09
+              - article [ref=e239] [cursor=pointer]:
+                - generic [ref=e240] [cursor=pointer]:
+                  - generic [ref=e241] [cursor=pointer]:
+                    - generic [ref=e243] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-09" [level=3] [ref=e244] [cursor=pointer]:
+                      - mark [ref=e245] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-09
+                    - generic [ref=e246] [cursor=pointer]:
+                      - mark [ref=e247] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e248] [cursor=pointer]:
+                      - generic [ref=e249] [cursor=pointer]: Invalid Date
+                      - generic [ref=e250] [cursor=pointer]: ·
+                      - generic [ref=e251] [cursor=pointer]:
+                        - generic [ref=e252] [cursor=pointer]: landscape architecture
+                        - generic [ref=e253] [cursor=pointer]: design
+                        - generic [ref=e254] [cursor=pointer]: planning
+                  - img [ref=e255] [cursor=pointer]
+            - link [ref=e257] [cursor=pointer]:
+              - /url: /artworks/landscape-design-094
+              - article [ref=e258] [cursor=pointer]:
+                - generic [ref=e259] [cursor=pointer]:
+                  - generic [ref=e260] [cursor=pointer]:
+                    - generic [ref=e262] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-094" [level=3] [ref=e263] [cursor=pointer]:
+                      - mark [ref=e264] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-094
+                    - generic [ref=e265] [cursor=pointer]:
+                      - mark [ref=e266] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e267] [cursor=pointer]:
+                      - generic [ref=e268] [cursor=pointer]: Invalid Date
+                      - generic [ref=e269] [cursor=pointer]: ·
+                      - generic [ref=e270] [cursor=pointer]:
+                        - generic [ref=e271] [cursor=pointer]: landscape architecture
+                        - generic [ref=e272] [cursor=pointer]: design
+                        - generic [ref=e273] [cursor=pointer]: planning
+                  - img [ref=e274] [cursor=pointer]
+            - link [ref=e276] [cursor=pointer]:
+              - /url: /artworks/landscape-design-096
+              - article [ref=e277] [cursor=pointer]:
+                - generic [ref=e278] [cursor=pointer]:
+                  - generic [ref=e279] [cursor=pointer]:
+                    - generic [ref=e281] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-096" [level=3] [ref=e282] [cursor=pointer]:
+                      - mark [ref=e283] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-096
+                    - generic [ref=e284] [cursor=pointer]:
+                      - mark [ref=e285] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e286] [cursor=pointer]:
+                      - generic [ref=e287] [cursor=pointer]: Invalid Date
+                      - generic [ref=e288] [cursor=pointer]: ·
+                      - generic [ref=e289] [cursor=pointer]:
+                        - generic [ref=e290] [cursor=pointer]: landscape architecture
+                        - generic [ref=e291] [cursor=pointer]: design
+                        - generic [ref=e292] [cursor=pointer]: planning
+                  - img [ref=e293] [cursor=pointer]
+            - link [ref=e295] [cursor=pointer]:
+              - /url: /artworks/landscape-design-097
+              - article [ref=e296] [cursor=pointer]:
+                - generic [ref=e297] [cursor=pointer]:
+                  - generic [ref=e298] [cursor=pointer]:
+                    - generic [ref=e300] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-097" [level=3] [ref=e301] [cursor=pointer]:
+                      - mark [ref=e302] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-097
+                    - generic [ref=e303] [cursor=pointer]:
+                      - mark [ref=e304] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e305] [cursor=pointer]:
+                      - generic [ref=e306] [cursor=pointer]: Invalid Date
+                      - generic [ref=e307] [cursor=pointer]: ·
+                      - generic [ref=e308] [cursor=pointer]:
+                        - generic [ref=e309] [cursor=pointer]: landscape architecture
+                        - generic [ref=e310] [cursor=pointer]: design
+                        - generic [ref=e311] [cursor=pointer]: planning
+                  - img [ref=e312] [cursor=pointer]
+            - link [ref=e314] [cursor=pointer]:
+              - /url: /artworks/landscape-design-099
+              - article [ref=e315] [cursor=pointer]:
+                - generic [ref=e316] [cursor=pointer]:
+                  - generic [ref=e317] [cursor=pointer]:
+                    - generic [ref=e319] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-099" [level=3] [ref=e320] [cursor=pointer]:
+                      - mark [ref=e321] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-099
+                    - generic [ref=e322] [cursor=pointer]:
+                      - mark [ref=e323] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e324] [cursor=pointer]:
+                      - generic [ref=e325] [cursor=pointer]: Invalid Date
+                      - generic [ref=e326] [cursor=pointer]: ·
+                      - generic [ref=e327] [cursor=pointer]:
+                        - generic [ref=e328] [cursor=pointer]: landscape architecture
+                        - generic [ref=e329] [cursor=pointer]: design
+                        - generic [ref=e330] [cursor=pointer]: planning
+                  - img [ref=e331] [cursor=pointer]
+            - link [ref=e333] [cursor=pointer]:
+              - /url: /artworks/landscape-design-100
+              - article [ref=e334] [cursor=pointer]:
+                - generic [ref=e335] [cursor=pointer]:
+                  - generic [ref=e336] [cursor=pointer]:
+                    - generic [ref=e338] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-100" [level=3] [ref=e339] [cursor=pointer]:
+                      - mark [ref=e340] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-100
+                    - generic [ref=e341] [cursor=pointer]:
+                      - mark [ref=e342] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e343] [cursor=pointer]:
+                      - generic [ref=e344] [cursor=pointer]: Invalid Date
+                      - generic [ref=e345] [cursor=pointer]: ·
+                      - generic [ref=e346] [cursor=pointer]:
+                        - generic [ref=e347] [cursor=pointer]: landscape architecture
+                        - generic [ref=e348] [cursor=pointer]: design
+                        - generic [ref=e349] [cursor=pointer]: planning
+                  - img [ref=e350] [cursor=pointer]
+            - link [ref=e352] [cursor=pointer]:
+              - /url: /artworks/landscape-design-101
+              - article [ref=e353] [cursor=pointer]:
+                - generic [ref=e354] [cursor=pointer]:
+                  - generic [ref=e355] [cursor=pointer]:
+                    - generic [ref=e357] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-101" [level=3] [ref=e358] [cursor=pointer]:
+                      - mark [ref=e359] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-101
+                    - generic [ref=e360] [cursor=pointer]:
+                      - mark [ref=e361] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e362] [cursor=pointer]:
+                      - generic [ref=e363] [cursor=pointer]: Invalid Date
+                      - generic [ref=e364] [cursor=pointer]: ·
+                      - generic [ref=e365] [cursor=pointer]:
+                        - generic [ref=e366] [cursor=pointer]: landscape architecture
+                        - generic [ref=e367] [cursor=pointer]: design
+                        - generic [ref=e368] [cursor=pointer]: planning
+                  - img [ref=e369] [cursor=pointer]
+            - link [ref=e371] [cursor=pointer]:
+              - /url: /artworks/landscape-design-102
+              - article [ref=e372] [cursor=pointer]:
+                - generic [ref=e373] [cursor=pointer]:
+                  - generic [ref=e374] [cursor=pointer]:
+                    - generic [ref=e376] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-102" [level=3] [ref=e377] [cursor=pointer]:
+                      - mark [ref=e378] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-102
+                    - generic [ref=e379] [cursor=pointer]:
+                      - mark [ref=e380] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e381] [cursor=pointer]:
+                      - generic [ref=e382] [cursor=pointer]: Invalid Date
+                      - generic [ref=e383] [cursor=pointer]: ·
+                      - generic [ref=e384] [cursor=pointer]:
+                        - generic [ref=e385] [cursor=pointer]: landscape architecture
+                        - generic [ref=e386] [cursor=pointer]: design
+                        - generic [ref=e387] [cursor=pointer]: planning
+                  - img [ref=e388] [cursor=pointer]
+            - link [ref=e390] [cursor=pointer]:
+              - /url: /artworks/landscape-design-104
+              - article [ref=e391] [cursor=pointer]:
+                - generic [ref=e392] [cursor=pointer]:
+                  - generic [ref=e393] [cursor=pointer]:
+                    - generic [ref=e395] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-104" [level=3] [ref=e396] [cursor=pointer]:
+                      - mark [ref=e397] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-104
+                    - generic [ref=e398] [cursor=pointer]:
+                      - mark [ref=e399] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e400] [cursor=pointer]:
+                      - generic [ref=e401] [cursor=pointer]: Invalid Date
+                      - generic [ref=e402] [cursor=pointer]: ·
+                      - generic [ref=e403] [cursor=pointer]:
+                        - generic [ref=e404] [cursor=pointer]: landscape architecture
+                        - generic [ref=e405] [cursor=pointer]: design
+                        - generic [ref=e406] [cursor=pointer]: planning
+                  - img [ref=e407] [cursor=pointer]
+            - link [ref=e409] [cursor=pointer]:
+              - /url: /artworks/landscape-design-107
+              - article [ref=e410] [cursor=pointer]:
+                - generic [ref=e411] [cursor=pointer]:
+                  - generic [ref=e412] [cursor=pointer]:
+                    - generic [ref=e414] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-107" [level=3] [ref=e415] [cursor=pointer]:
+                      - mark [ref=e416] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-107
+                    - generic [ref=e417] [cursor=pointer]:
+                      - mark [ref=e418] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - concept study
+                    - generic [ref=e419] [cursor=pointer]:
+                      - generic [ref=e420] [cursor=pointer]: Invalid Date
+                      - generic [ref=e421] [cursor=pointer]: ·
+                      - generic [ref=e422] [cursor=pointer]:
+                        - generic [ref=e423] [cursor=pointer]: landscape architecture
+                        - generic [ref=e424] [cursor=pointer]: design
+                        - generic [ref=e425] [cursor=pointer]: planning
+                  - img [ref=e426] [cursor=pointer]
+            - link [ref=e428] [cursor=pointer]:
+              - /url: /artworks/landscape-design-109
+              - article [ref=e429] [cursor=pointer]:
+                - generic [ref=e430] [cursor=pointer]:
+                  - generic [ref=e431] [cursor=pointer]:
+                    - generic [ref=e433] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-109" [level=3] [ref=e434] [cursor=pointer]:
+                      - mark [ref=e435] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-109
+                    - generic [ref=e436] [cursor=pointer]:
+                      - mark [ref=e437] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e438] [cursor=pointer]:
+                      - generic [ref=e439] [cursor=pointer]: Invalid Date
+                      - generic [ref=e440] [cursor=pointer]: ·
+                      - generic [ref=e441] [cursor=pointer]:
+                        - generic [ref=e442] [cursor=pointer]: landscape architecture
+                        - generic [ref=e443] [cursor=pointer]: design
+                        - generic [ref=e444] [cursor=pointer]: planning
+                  - img [ref=e445] [cursor=pointer]
+            - link [ref=e447] [cursor=pointer]:
+              - /url: /artworks/landscape-design-111
+              - article [ref=e448] [cursor=pointer]:
+                - generic [ref=e449] [cursor=pointer]:
+                  - generic [ref=e450] [cursor=pointer]:
+                    - generic [ref=e452] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-111" [level=3] [ref=e453] [cursor=pointer]:
+                      - mark [ref=e454] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-111
+                    - generic [ref=e455] [cursor=pointer]:
+                      - mark [ref=e456] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e457] [cursor=pointer]:
+                      - generic [ref=e458] [cursor=pointer]: Invalid Date
+                      - generic [ref=e459] [cursor=pointer]: ·
+                      - generic [ref=e460] [cursor=pointer]:
+                        - generic [ref=e461] [cursor=pointer]: landscape architecture
+                        - generic [ref=e462] [cursor=pointer]: design
+                        - generic [ref=e463] [cursor=pointer]: planning
+                  - img [ref=e464] [cursor=pointer]
+            - link [ref=e466] [cursor=pointer]:
+              - /url: /artworks/landscape-design-112
+              - article [ref=e467] [cursor=pointer]:
+                - generic [ref=e468] [cursor=pointer]:
+                  - generic [ref=e469] [cursor=pointer]:
+                    - generic [ref=e471] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-112" [level=3] [ref=e472] [cursor=pointer]:
+                      - mark [ref=e473] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-112
+                    - generic [ref=e474] [cursor=pointer]:
+                      - mark [ref=e475] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e476] [cursor=pointer]:
+                      - generic [ref=e477] [cursor=pointer]: Invalid Date
+                      - generic [ref=e478] [cursor=pointer]: ·
+                      - generic [ref=e479] [cursor=pointer]:
+                        - generic [ref=e480] [cursor=pointer]: landscape architecture
+                        - generic [ref=e481] [cursor=pointer]: design
+                        - generic [ref=e482] [cursor=pointer]: planning
+                  - img [ref=e483] [cursor=pointer]
+            - link [ref=e485] [cursor=pointer]:
+              - /url: /artworks/landscape-design-127
+              - article [ref=e486] [cursor=pointer]:
+                - generic [ref=e487] [cursor=pointer]:
+                  - generic [ref=e488] [cursor=pointer]:
+                    - generic [ref=e490] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-127" [level=3] [ref=e491] [cursor=pointer]:
+                      - mark [ref=e492] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-127
+                    - generic [ref=e493] [cursor=pointer]:
+                      - mark [ref=e494] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e495] [cursor=pointer]:
+                      - generic [ref=e496] [cursor=pointer]: Invalid Date
+                      - generic [ref=e497] [cursor=pointer]: ·
+                      - generic [ref=e498] [cursor=pointer]:
+                        - generic [ref=e499] [cursor=pointer]: landscape architecture
+                        - generic [ref=e500] [cursor=pointer]: design
+                        - generic [ref=e501] [cursor=pointer]: planning
+                  - img [ref=e502] [cursor=pointer]
+            - link [ref=e504] [cursor=pointer]:
+              - /url: /artworks/landscape-design-133
+              - article [ref=e505] [cursor=pointer]:
+                - generic [ref=e506] [cursor=pointer]:
+                  - generic [ref=e507] [cursor=pointer]:
+                    - generic [ref=e509] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-133" [level=3] [ref=e510] [cursor=pointer]:
+                      - mark [ref=e511] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-133
+                    - generic [ref=e512] [cursor=pointer]:
+                      - mark [ref=e513] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e514] [cursor=pointer]:
+                      - generic [ref=e515] [cursor=pointer]: Invalid Date
+                      - generic [ref=e516] [cursor=pointer]: ·
+                      - generic [ref=e517] [cursor=pointer]:
+                        - generic [ref=e518] [cursor=pointer]: landscape architecture
+                        - generic [ref=e519] [cursor=pointer]: design
+                        - generic [ref=e520] [cursor=pointer]: planning
+                  - img [ref=e521] [cursor=pointer]
+            - link [ref=e523] [cursor=pointer]:
+              - /url: /artworks/landscape-design-144
+              - article [ref=e524] [cursor=pointer]:
+                - generic [ref=e525] [cursor=pointer]:
+                  - generic [ref=e526] [cursor=pointer]:
+                    - generic [ref=e528] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-144" [level=3] [ref=e529] [cursor=pointer]:
+                      - mark [ref=e530] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-144
+                    - generic [ref=e531] [cursor=pointer]:
+                      - mark [ref=e532] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e533] [cursor=pointer]:
+                      - generic [ref=e534] [cursor=pointer]: Invalid Date
+                      - generic [ref=e535] [cursor=pointer]: ·
+                      - generic [ref=e536] [cursor=pointer]:
+                        - generic [ref=e537] [cursor=pointer]: landscape architecture
+                        - generic [ref=e538] [cursor=pointer]: design
+                        - generic [ref=e539] [cursor=pointer]: planning
+                  - img [ref=e540] [cursor=pointer]
+            - link [ref=e542] [cursor=pointer]:
+              - /url: /artworks/landscape-design-145
+              - article [ref=e543] [cursor=pointer]:
+                - generic [ref=e544] [cursor=pointer]:
+                  - generic [ref=e545] [cursor=pointer]:
+                    - generic [ref=e547] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-145" [level=3] [ref=e548] [cursor=pointer]:
+                      - mark [ref=e549] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-145
+                    - generic [ref=e550] [cursor=pointer]:
+                      - mark [ref=e551] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e552] [cursor=pointer]:
+                      - generic [ref=e553] [cursor=pointer]: Invalid Date
+                      - generic [ref=e554] [cursor=pointer]: ·
+                      - generic [ref=e555] [cursor=pointer]:
+                        - generic [ref=e556] [cursor=pointer]: landscape architecture
+                        - generic [ref=e557] [cursor=pointer]: design
+                        - generic [ref=e558] [cursor=pointer]: planning
+                  - img [ref=e559] [cursor=pointer]
+            - link [ref=e561] [cursor=pointer]:
+              - /url: /artworks/landscape-design-146
+              - article [ref=e562] [cursor=pointer]:
+                - generic [ref=e563] [cursor=pointer]:
+                  - generic [ref=e564] [cursor=pointer]:
+                    - generic [ref=e566] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-146" [level=3] [ref=e567] [cursor=pointer]:
+                      - mark [ref=e568] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-146
+                    - generic [ref=e569] [cursor=pointer]:
+                      - mark [ref=e570] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e571] [cursor=pointer]:
+                      - generic [ref=e572] [cursor=pointer]: Invalid Date
+                      - generic [ref=e573] [cursor=pointer]: ·
+                      - generic [ref=e574] [cursor=pointer]:
+                        - generic [ref=e575] [cursor=pointer]: landscape architecture
+                        - generic [ref=e576] [cursor=pointer]: design
+                        - generic [ref=e577] [cursor=pointer]: planning
+                  - img [ref=e578] [cursor=pointer]
+            - link [ref=e580] [cursor=pointer]:
+              - /url: /artworks/landscape-design-147
+              - article [ref=e581] [cursor=pointer]:
+                - generic [ref=e582] [cursor=pointer]:
+                  - generic [ref=e583] [cursor=pointer]:
+                    - generic [ref=e585] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-147" [level=3] [ref=e586] [cursor=pointer]:
+                      - mark [ref=e587] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-147
+                    - generic [ref=e588] [cursor=pointer]:
+                      - mark [ref=e589] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e590] [cursor=pointer]:
+                      - generic [ref=e591] [cursor=pointer]: Invalid Date
+                      - generic [ref=e592] [cursor=pointer]: ·
+                      - generic [ref=e593] [cursor=pointer]:
+                        - generic [ref=e594] [cursor=pointer]: landscape architecture
+                        - generic [ref=e595] [cursor=pointer]: design
+                        - generic [ref=e596] [cursor=pointer]: planning
+                  - img [ref=e597] [cursor=pointer]
+            - link [ref=e599] [cursor=pointer]:
+              - /url: /artworks/landscape-design-175
+              - article [ref=e600] [cursor=pointer]:
+                - generic [ref=e601] [cursor=pointer]:
+                  - generic [ref=e602] [cursor=pointer]:
+                    - generic [ref=e604] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-175" [level=3] [ref=e605] [cursor=pointer]:
+                      - mark [ref=e606] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-175
+                    - generic [ref=e607] [cursor=pointer]:
+                      - mark [ref=e608] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e609] [cursor=pointer]:
+                      - generic [ref=e610] [cursor=pointer]: Invalid Date
+                      - generic [ref=e611] [cursor=pointer]: ·
+                      - generic [ref=e612] [cursor=pointer]:
+                        - generic [ref=e613] [cursor=pointer]: landscape architecture
+                        - generic [ref=e614] [cursor=pointer]: design
+                        - generic [ref=e615] [cursor=pointer]: planning
+                  - img [ref=e616] [cursor=pointer]
+            - link [ref=e618] [cursor=pointer]:
+              - /url: /artworks/landscape-design-176
+              - article [ref=e619] [cursor=pointer]:
+                - generic [ref=e620] [cursor=pointer]:
+                  - generic [ref=e621] [cursor=pointer]:
+                    - generic [ref=e623] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-176" [level=3] [ref=e624] [cursor=pointer]:
+                      - mark [ref=e625] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-176
+                    - generic [ref=e626] [cursor=pointer]:
+                      - mark [ref=e627] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e628] [cursor=pointer]:
+                      - generic [ref=e629] [cursor=pointer]: Invalid Date
+                      - generic [ref=e630] [cursor=pointer]: ·
+                      - generic [ref=e631] [cursor=pointer]:
+                        - generic [ref=e632] [cursor=pointer]: landscape architecture
+                        - generic [ref=e633] [cursor=pointer]: design
+                        - generic [ref=e634] [cursor=pointer]: planning
+                  - img [ref=e635] [cursor=pointer]
+            - link [ref=e637] [cursor=pointer]:
+              - /url: /artworks/landscape-design-238
+              - article [ref=e638] [cursor=pointer]:
+                - generic [ref=e639] [cursor=pointer]:
+                  - generic [ref=e640] [cursor=pointer]:
+                    - generic [ref=e642] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-238" [level=3] [ref=e643] [cursor=pointer]:
+                      - mark [ref=e644] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-238
+                    - generic [ref=e645] [cursor=pointer]:
+                      - mark [ref=e646] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - planning study
+                    - generic [ref=e647] [cursor=pointer]:
+                      - generic [ref=e648] [cursor=pointer]: Invalid Date
+                      - generic [ref=e649] [cursor=pointer]: ·
+                      - generic [ref=e650] [cursor=pointer]:
+                        - generic [ref=e651] [cursor=pointer]: landscape architecture
+                        - generic [ref=e652] [cursor=pointer]: design
+                        - generic [ref=e653] [cursor=pointer]: planning
+                  - img [ref=e654] [cursor=pointer]
+            - link [ref=e656] [cursor=pointer]:
+              - /url: /artworks/landscape-design-242
+              - article [ref=e657] [cursor=pointer]:
+                - generic [ref=e658] [cursor=pointer]:
+                  - generic [ref=e659] [cursor=pointer]:
+                    - generic [ref=e661] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-242" [level=3] [ref=e662] [cursor=pointer]:
+                      - mark [ref=e663] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-242
+                    - generic [ref=e664] [cursor=pointer]:
+                      - mark [ref=e665] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - spatial concept
+                    - generic [ref=e666] [cursor=pointer]:
+                      - generic [ref=e667] [cursor=pointer]: Invalid Date
+                      - generic [ref=e668] [cursor=pointer]: ·
+                      - generic [ref=e669] [cursor=pointer]:
+                        - generic [ref=e670] [cursor=pointer]: landscape architecture
+                        - generic [ref=e671] [cursor=pointer]: design
+                        - generic [ref=e672] [cursor=pointer]: planning
+                  - img [ref=e673] [cursor=pointer]
+            - link [ref=e675] [cursor=pointer]:
+              - /url: /artworks/landscape-design-270
+              - article [ref=e676] [cursor=pointer]:
+                - generic [ref=e677] [cursor=pointer]:
+                  - generic [ref=e678] [cursor=pointer]:
+                    - generic [ref=e680] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-270" [level=3] [ref=e681] [cursor=pointer]:
+                      - mark [ref=e682] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-270
+                    - generic [ref=e683] [cursor=pointer]:
+                      - mark [ref=e684] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual plan
+                    - generic [ref=e685] [cursor=pointer]:
+                      - generic [ref=e686] [cursor=pointer]: Invalid Date
+                      - generic [ref=e687] [cursor=pointer]: ·
+                      - generic [ref=e688] [cursor=pointer]:
+                        - generic [ref=e689] [cursor=pointer]: landscape architecture
+                        - generic [ref=e690] [cursor=pointer]: design
+                        - generic [ref=e691] [cursor=pointer]: planning
+                  - img [ref=e692] [cursor=pointer]
+            - link [ref=e694] [cursor=pointer]:
+              - /url: /artworks/landscape-design-273
+              - article [ref=e695] [cursor=pointer]:
+                - generic [ref=e696] [cursor=pointer]:
+                  - generic [ref=e697] [cursor=pointer]:
+                    - generic [ref=e699] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-273" [level=3] [ref=e700] [cursor=pointer]:
+                      - mark [ref=e701] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-273
+                    - generic [ref=e702] [cursor=pointer]:
+                      - mark [ref=e703] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e704] [cursor=pointer]:
+                      - generic [ref=e705] [cursor=pointer]: Invalid Date
+                      - generic [ref=e706] [cursor=pointer]: ·
+                      - generic [ref=e707] [cursor=pointer]:
+                        - generic [ref=e708] [cursor=pointer]: landscape architecture
+                        - generic [ref=e709] [cursor=pointer]: design
+                        - generic [ref=e710] [cursor=pointer]: planning
+                  - img [ref=e711] [cursor=pointer]
+            - link [ref=e713] [cursor=pointer]:
+              - /url: /artworks/landscape-design-278
+              - article [ref=e714] [cursor=pointer]:
+                - generic [ref=e715] [cursor=pointer]:
+                  - generic [ref=e716] [cursor=pointer]:
+                    - generic [ref=e718] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-278" [level=3] [ref=e719] [cursor=pointer]:
+                      - mark [ref=e720] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-278
+                    - generic [ref=e721] [cursor=pointer]:
+                      - mark [ref=e722] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e723] [cursor=pointer]:
+                      - generic [ref=e724] [cursor=pointer]: Invalid Date
+                      - generic [ref=e725] [cursor=pointer]: ·
+                      - generic [ref=e726] [cursor=pointer]:
+                        - generic [ref=e727] [cursor=pointer]: landscape architecture
+                        - generic [ref=e728] [cursor=pointer]: design
+                        - generic [ref=e729] [cursor=pointer]: planning
+                  - img [ref=e730] [cursor=pointer]
+            - link [ref=e732] [cursor=pointer]:
+              - /url: /artworks/landscape-design-288
+              - article [ref=e733] [cursor=pointer]:
+                - generic [ref=e734] [cursor=pointer]:
+                  - generic [ref=e735] [cursor=pointer]:
+                    - generic [ref=e737] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-288" [level=3] [ref=e738] [cursor=pointer]:
+                      - mark [ref=e739] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-288
+                    - generic [ref=e740] [cursor=pointer]:
+                      - mark [ref=e741] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e742] [cursor=pointer]:
+                      - generic [ref=e743] [cursor=pointer]: Invalid Date
+                      - generic [ref=e744] [cursor=pointer]: ·
+                      - generic [ref=e745] [cursor=pointer]:
+                        - generic [ref=e746] [cursor=pointer]: landscape architecture
+                        - generic [ref=e747] [cursor=pointer]: design
+                        - generic [ref=e748] [cursor=pointer]: planning
+                  - img [ref=e749] [cursor=pointer]
+            - link [ref=e751] [cursor=pointer]:
+              - /url: /artworks/landscape-design-292
+              - article [ref=e752] [cursor=pointer]:
+                - generic [ref=e753] [cursor=pointer]:
+                  - generic [ref=e754] [cursor=pointer]:
+                    - generic [ref=e756] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-292" [level=3] [ref=e757] [cursor=pointer]:
+                      - mark [ref=e758] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-292
+                    - generic [ref=e759] [cursor=pointer]:
+                      - mark [ref=e760] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e761] [cursor=pointer]:
+                      - generic [ref=e762] [cursor=pointer]: Invalid Date
+                      - generic [ref=e763] [cursor=pointer]: ·
+                      - generic [ref=e764] [cursor=pointer]:
+                        - generic [ref=e765] [cursor=pointer]: landscape architecture
+                        - generic [ref=e766] [cursor=pointer]: design
+                        - generic [ref=e767] [cursor=pointer]: planning
+                  - img [ref=e768] [cursor=pointer]
+            - link [ref=e770] [cursor=pointer]:
+              - /url: /artworks/landscape-design-293
+              - article [ref=e771] [cursor=pointer]:
+                - generic [ref=e772] [cursor=pointer]:
+                  - generic [ref=e773] [cursor=pointer]:
+                    - generic [ref=e775] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-293" [level=3] [ref=e776] [cursor=pointer]:
+                      - mark [ref=e777] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-293
+                    - generic [ref=e778] [cursor=pointer]:
+                      - mark [ref=e779] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - design exploration
+                    - generic [ref=e780] [cursor=pointer]:
+                      - generic [ref=e781] [cursor=pointer]: Invalid Date
+                      - generic [ref=e782] [cursor=pointer]: ·
+                      - generic [ref=e783] [cursor=pointer]:
+                        - generic [ref=e784] [cursor=pointer]: landscape architecture
+                        - generic [ref=e785] [cursor=pointer]: design
+                        - generic [ref=e786] [cursor=pointer]: planning
+                  - img [ref=e787] [cursor=pointer]
+            - link [ref=e789] [cursor=pointer]:
+              - /url: /artworks/landscape-design-297
+              - article [ref=e790] [cursor=pointer]:
+                - generic [ref=e791] [cursor=pointer]:
+                  - generic [ref=e792] [cursor=pointer]:
+                    - generic [ref=e794] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-297" [level=3] [ref=e795] [cursor=pointer]:
+                      - mark [ref=e796] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-297
+                    - generic [ref=e797] [cursor=pointer]:
+                      - mark [ref=e798] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e799] [cursor=pointer]:
+                      - generic [ref=e800] [cursor=pointer]: Invalid Date
+                      - generic [ref=e801] [cursor=pointer]: ·
+                      - generic [ref=e802] [cursor=pointer]:
+                        - generic [ref=e803] [cursor=pointer]: landscape architecture
+                        - generic [ref=e804] [cursor=pointer]: design
+                        - generic [ref=e805] [cursor=pointer]: planning
+                  - img [ref=e806] [cursor=pointer]
+            - link [ref=e808] [cursor=pointer]:
+              - /url: /artworks/landscape-design-43
+              - article [ref=e809] [cursor=pointer]:
+                - generic [ref=e810] [cursor=pointer]:
+                  - generic [ref=e811] [cursor=pointer]:
+                    - generic [ref=e813] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-43" [level=3] [ref=e814] [cursor=pointer]:
+                      - mark [ref=e815] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-43
+                    - generic [ref=e816] [cursor=pointer]:
+                      - mark [ref=e817] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e818] [cursor=pointer]:
+                      - generic [ref=e819] [cursor=pointer]: Invalid Date
+                      - generic [ref=e820] [cursor=pointer]: ·
+                      - generic [ref=e821] [cursor=pointer]:
+                        - generic [ref=e822] [cursor=pointer]: landscape architecture
+                        - generic [ref=e823] [cursor=pointer]: design
+                        - generic [ref=e824] [cursor=pointer]: planning
+                  - img [ref=e825] [cursor=pointer]
+            - link [ref=e827] [cursor=pointer]:
+              - /url: /artworks/landscape-design-45
+              - article [ref=e828] [cursor=pointer]:
+                - generic [ref=e829] [cursor=pointer]:
+                  - generic [ref=e830] [cursor=pointer]:
+                    - generic [ref=e832] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-45" [level=3] [ref=e833] [cursor=pointer]:
+                      - mark [ref=e834] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-45
+                    - generic [ref=e835] [cursor=pointer]:
+                      - mark [ref=e836] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e837] [cursor=pointer]:
+                      - generic [ref=e838] [cursor=pointer]: Invalid Date
+                      - generic [ref=e839] [cursor=pointer]: ·
+                      - generic [ref=e840] [cursor=pointer]:
+                        - generic [ref=e841] [cursor=pointer]: landscape architecture
+                        - generic [ref=e842] [cursor=pointer]: design
+                        - generic [ref=e843] [cursor=pointer]: planning
+                  - img [ref=e844] [cursor=pointer]
+            - link [ref=e846] [cursor=pointer]:
+              - /url: /artworks/landscape-design-48
+              - article [ref=e847] [cursor=pointer]:
+                - generic [ref=e848] [cursor=pointer]:
+                  - generic [ref=e849] [cursor=pointer]:
+                    - generic [ref=e851] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-48" [level=3] [ref=e852] [cursor=pointer]:
+                      - mark [ref=e853] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-48
+                    - generic [ref=e854] [cursor=pointer]:
+                      - mark [ref=e855] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e856] [cursor=pointer]:
+                      - generic [ref=e857] [cursor=pointer]: Invalid Date
+                      - generic [ref=e858] [cursor=pointer]: ·
+                      - generic [ref=e859] [cursor=pointer]:
+                        - generic [ref=e860] [cursor=pointer]: landscape architecture
+                        - generic [ref=e861] [cursor=pointer]: design
+                        - generic [ref=e862] [cursor=pointer]: planning
+                  - img [ref=e863] [cursor=pointer]
+            - link [ref=e865] [cursor=pointer]:
+              - /url: /artworks/landscape-design-59
+              - article [ref=e866] [cursor=pointer]:
+                - generic [ref=e867] [cursor=pointer]:
+                  - generic [ref=e868] [cursor=pointer]:
+                    - generic [ref=e870] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-59" [level=3] [ref=e871] [cursor=pointer]:
+                      - mark [ref=e872] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-59
+                    - generic [ref=e873] [cursor=pointer]:
+                      - mark [ref=e874] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e875] [cursor=pointer]:
+                      - generic [ref=e876] [cursor=pointer]: Invalid Date
+                      - generic [ref=e877] [cursor=pointer]: ·
+                      - generic [ref=e878] [cursor=pointer]:
+                        - generic [ref=e879] [cursor=pointer]: landscape architecture
+                        - generic [ref=e880] [cursor=pointer]: design
+                        - generic [ref=e881] [cursor=pointer]: planning
+                  - img [ref=e882] [cursor=pointer]
+            - link [ref=e884] [cursor=pointer]:
+              - /url: /artworks/landscape-design-66
+              - article [ref=e885] [cursor=pointer]:
+                - generic [ref=e886] [cursor=pointer]:
+                  - generic [ref=e887] [cursor=pointer]:
+                    - generic [ref=e889] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-66" [level=3] [ref=e890] [cursor=pointer]:
+                      - mark [ref=e891] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-66
+                    - generic [ref=e892] [cursor=pointer]:
+                      - mark [ref=e893] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e894] [cursor=pointer]:
+                      - generic [ref=e895] [cursor=pointer]: Invalid Date
+                      - generic [ref=e896] [cursor=pointer]: ·
+                      - generic [ref=e897] [cursor=pointer]:
+                        - generic [ref=e898] [cursor=pointer]: landscape architecture
+                        - generic [ref=e899] [cursor=pointer]: design
+                        - generic [ref=e900] [cursor=pointer]: planning
+                  - img [ref=e901] [cursor=pointer]
+            - link [ref=e903] [cursor=pointer]:
+              - /url: /artworks/landscape-design-67
+              - article [ref=e904] [cursor=pointer]:
+                - generic [ref=e905] [cursor=pointer]:
+                  - generic [ref=e906] [cursor=pointer]:
+                    - generic [ref=e908] [cursor=pointer]: ARTWORK
+                    - heading "Landscape Design Study MQ-67" [level=3] [ref=e909] [cursor=pointer]:
+                      - mark [ref=e910] [cursor=pointer]: Landscape
+                      - text: Design Study MQ-67
+                    - generic [ref=e911] [cursor=pointer]:
+                      - mark [ref=e912] [cursor=pointer]: Landscape
+                      - text: architecture design drawing from archive - conceptual study
+                    - generic [ref=e913] [cursor=pointer]:
+                      - generic [ref=e914] [cursor=pointer]: Invalid Date
+                      - generic [ref=e915] [cursor=pointer]: ·
+                      - generic [ref=e916] [cursor=pointer]:
+                        - generic [ref=e917] [cursor=pointer]: landscape architecture
+                        - generic [ref=e918] [cursor=pointer]: design
+                        - generic [ref=e919] [cursor=pointer]: planning
+                  - img [ref=e920] [cursor=pointer]
+            - link [ref=e922] [cursor=pointer]:
+              - /url: /artworks/img4044
+              - article [ref=e923] [cursor=pointer]:
+                - generic [ref=e924] [cursor=pointer]:
+                  - generic [ref=e925] [cursor=pointer]:
+                    - generic [ref=e927] [cursor=pointer]: ARTWORK
+                    - heading "Urban Landscape 4044" [level=3] [ref=e928] [cursor=pointer]:
+                      - text: Urban
+                      - mark [ref=e929] [cursor=pointer]: Landscape
+                      - text: "4044"
+                    - generic [ref=e930] [cursor=pointer]: "[AI GENERATED - PLACEHOLDER] This watercolor artwork showcases the artist's exploration of natural forms and light. The piece demonstrates skilled use of the watercolor medium with attention to color, composition, and technique."
+                    - generic [ref=e931] [cursor=pointer]:
+                      - generic [ref=e932] [cursor=pointer]: December 31, 2023
+                      - generic [ref=e933] [cursor=pointer]: ·
+                      - generic [ref=e934] [cursor=pointer]:
+                        - generic [ref=e935] [cursor=pointer]: watercolour
+                        - generic [ref=e936] [cursor=pointer]: urban
+                        - generic [ref=e937] [cursor=pointer]: landscape
+                  - img [ref=e938] [cursor=pointer]
+            - link [ref=e940] [cursor=pointer]:
+              - /url: /artworks/fraser-river-willows
+              - article [ref=e941] [cursor=pointer]:
+                - generic [ref=e942] [cursor=pointer]:
+                  - generic [ref=e943] [cursor=pointer]:
+                    - generic [ref=e944] [cursor=pointer]:
+                      - generic [ref=e945] [cursor=pointer]: ARTWORK
+                      - generic [ref=e946] [cursor=pointer]: FEATURED
+                    - heading "Fraser River Willows" [level=3] [ref=e947] [cursor=pointer]
+                    - generic [ref=e948] [cursor=pointer]:
+                      - text: Atmospheric
+                      - mark [ref=e949] [cursor=pointer]: landscape
+                      - text: capturing graceful willow branches cascading over the Fraser River with distant shoreline and wildflowers
+                    - generic [ref=e950] [cursor=pointer]:
+                      - generic [ref=e951] [cursor=pointer]: Invalid Date
+                      - generic [ref=e952] [cursor=pointer]: ·
+                      - generic [ref=e953] [cursor=pointer]:
+                        - generic [ref=e954] [cursor=pointer]: watercolour
+                        - generic [ref=e955] [cursor=pointer]: landscape
+                        - generic [ref=e956] [cursor=pointer]: nature
+                        - generic [ref=e957] [cursor=pointer]: "+3"
+                  - img [ref=e958] [cursor=pointer]
+            - link [ref=e960] [cursor=pointer]:
+              - /url: /artworks/april-13-park
+              - article [ref=e961] [cursor=pointer]:
+                - generic [ref=e962] [cursor=pointer]:
+                  - generic [ref=e963] [cursor=pointer]:
+                    - generic [ref=e964] [cursor=pointer]:
+                      - generic [ref=e965] [cursor=pointer]: ARTWORK
+                      - generic [ref=e966] [cursor=pointer]: FEATURED
+                    - heading "April 13 Park" [level=3] [ref=e967] [cursor=pointer]
+                    - generic [ref=e968] [cursor=pointer]: "[AI GENERATED - PLACEHOLDER] Brief description based on the artwork's subject matter."
+                    - generic [ref=e969] [cursor=pointer]:
+                      - generic [ref=e970] [cursor=pointer]: April 12, 2024
+                      - generic [ref=e971] [cursor=pointer]: ·
+                      - generic [ref=e972] [cursor=pointer]:
+                        - generic [ref=e973] [cursor=pointer]: watercolour
+                        - generic [ref=e974] [cursor=pointer]: landscape
+                        - generic [ref=e975] [cursor=pointer]: nature
+                  - img [ref=e976] [cursor=pointer]
+            - link [ref=e978] [cursor=pointer]:
+              - /url: /artworks/dec-17-painting
+              - article [ref=e979] [cursor=pointer]:
+                - generic [ref=e980] [cursor=pointer]:
+                  - generic [ref=e981] [cursor=pointer]:
+                    - generic [ref=e983] [cursor=pointer]: ARTWORK
+                    - heading "Dec 17 painting" [level=3] [ref=e984] [cursor=pointer]
+                    - generic [ref=e985] [cursor=pointer]: "[AI GENERATED - PLACEHOLDER] Brief description based on the artwork's subject matter."
+                    - generic [ref=e986] [cursor=pointer]:
+                      - generic [ref=e987] [cursor=pointer]: December 16, 2024
+                      - generic [ref=e988] [cursor=pointer]: ·
+                      - generic [ref=e989] [cursor=pointer]:
+                        - generic [ref=e990] [cursor=pointer]: watercolour
+                        - generic [ref=e991] [cursor=pointer]: landscape
+                  - img [ref=e992] [cursor=pointer]
+            - link [ref=e994] [cursor=pointer]:
+              - /url: /artworks/dec21-painting
+              - article [ref=e995] [cursor=pointer]:
+                - generic [ref=e996] [cursor=pointer]:
+                  - generic [ref=e997] [cursor=pointer]:
+                    - generic [ref=e999] [cursor=pointer]: ARTWORK
+                    - heading "Dec21 painting" [level=3] [ref=e1000] [cursor=pointer]
+                    - generic [ref=e1001] [cursor=pointer]: "[AI GENERATED - PLACEHOLDER] Brief description based on the artwork's subject matter."
+                    - generic [ref=e1002] [cursor=pointer]:
+                      - generic [ref=e1003] [cursor=pointer]: December 20, 2024
+                      - generic [ref=e1004] [cursor=pointer]: ·
+                      - generic [ref=e1005] [cursor=pointer]:
+                        - generic [ref=e1006] [cursor=pointer]: watercolour
+                        - generic [ref=e1007] [cursor=pointer]: landscape
+                  - img [ref=e1008] [cursor=pointer]
+            - link [ref=e1010] [cursor=pointer]:
+              - /url: /artworks/nanaimo-elevation
+              - article [ref=e1011] [cursor=pointer]:
+                - generic [ref=e1012] [cursor=pointer]:
+                  - generic [ref=e1013] [cursor=pointer]:
+                    - generic [ref=e1015] [cursor=pointer]: ARTWORK
+                    - heading "Nanaimo Elevation" [level=3] [ref=e1016] [cursor=pointer]
+                    - generic [ref=e1017] [cursor=pointer]: "[AI GENERATED - PLACEHOLDER] This watercolor artwork showcases the artist's exploration of natural forms and light. The piece demonstrates skilled use of the watercolor medium with attention to color, composition, and technique."
+                    - generic [ref=e1018] [cursor=pointer]:
+                      - generic [ref=e1019] [cursor=pointer]: December 31, 2023
+                      - generic [ref=e1020] [cursor=pointer]: ·
+                      - generic [ref=e1021] [cursor=pointer]:
+                        - generic [ref=e1022] [cursor=pointer]: watercolour
+                        - generic [ref=e1023] [cursor=pointer]: architectural
+                        - generic [ref=e1024] [cursor=pointer]: landscape
+                  - img [ref=e1025] [cursor=pointer]
+            - link [ref=e1027] [cursor=pointer]:
+              - /url: /artworks/pathway
+              - article [ref=e1028] [cursor=pointer]:
+                - generic [ref=e1029] [cursor=pointer]:
+                  - generic [ref=e1030] [cursor=pointer]:
+                    - generic [ref=e1032] [cursor=pointer]: ARTWORK
+                    - heading "pathway" [level=3] [ref=e1033] [cursor=pointer]
+                    - generic [ref=e1034] [cursor=pointer]: "Watercolor landscape painting: pathway."
+                    - generic [ref=e1035] [cursor=pointer]:
+                      - generic [ref=e1036] [cursor=pointer]: December 31, 2022
+                      - generic [ref=e1037] [cursor=pointer]: ·
+                      - generic [ref=e1038] [cursor=pointer]:
+                        - generic [ref=e1039] [cursor=pointer]: watercolour
+                        - generic [ref=e1040] [cursor=pointer]: landscape
+                        - generic [ref=e1041] [cursor=pointer]: nature
+                        - generic [ref=e1042] [cursor=pointer]: "+1"
+                  - img [ref=e1043] [cursor=pointer]
+            - link [ref=e1045] [cursor=pointer]:
+              - /url: /artworks/quiet-water
+              - article [ref=e1046] [cursor=pointer]:
+                - generic [ref=e1047] [cursor=pointer]:
+                  - generic [ref=e1048] [cursor=pointer]:
+                    - generic [ref=e1050] [cursor=pointer]: ARTWORK
+                    - heading "quiet water" [level=3] [ref=e1051] [cursor=pointer]
+                    - generic [ref=e1052] [cursor=pointer]: Watercolor study of water lilies.
+                    - generic [ref=e1053] [cursor=pointer]:
+                      - generic [ref=e1054] [cursor=pointer]: December 31, 2022
+                      - generic [ref=e1055] [cursor=pointer]: ·
+                      - generic [ref=e1056] [cursor=pointer]:
+                        - generic [ref=e1057] [cursor=pointer]: watercolour
+                        - generic [ref=e1058] [cursor=pointer]: botanical
+                        - generic [ref=e1059] [cursor=pointer]: water lily
+                        - generic [ref=e1060] [cursor=pointer]: "+2"
+                  - img [ref=e1061] [cursor=pointer]
+            - link [ref=e1063] [cursor=pointer]:
+              - /url: /artworks/shufa-mountain-stillness
+              - article [ref=e1064] [cursor=pointer]:
+                - generic [ref=e1065] [cursor=pointer]:
+                  - generic [ref=e1066] [cursor=pointer]:
+                    - generic [ref=e1068] [cursor=pointer]: ARTWORK
+                    - heading "Mountain Stillness - 靜觀山色" [level=3] [ref=e1069] [cursor=pointer]
+                    - generic [ref=e1070] [cursor=pointer]: "This square-format piece presents a line from Tang dynasty landscape poetry: '靜觀山色' (jìng guān shān sè) - 'In stillness, observe the mountain's colors.' Written in regular script with subtle applications of mineral pigment, it bridges traditional calligraphy and landscape painting, suggesting rather than depicting the mountain presence."
+                    - generic [ref=e1071] [cursor=pointer]:
+                      - generic [ref=e1072] [cursor=pointer]: November 1, 2024
+                      - generic [ref=e1073] [cursor=pointer]: ·
+                      - generic [ref=e1074] [cursor=pointer]:
+                        - generic [ref=e1075] [cursor=pointer]: shufa
+                        - generic [ref=e1076] [cursor=pointer]: ink
+                        - generic [ref=e1077] [cursor=pointer]: landscape poetry
+                        - generic [ref=e1078] [cursor=pointer]: "+2"
+                  - img [ref=e1079] [cursor=pointer]
+            - link [ref=e1081] [cursor=pointer]:
+              - /url: /artworks/terrace-painting
+              - article [ref=e1082] [cursor=pointer]:
+                - generic [ref=e1083] [cursor=pointer]:
+                  - generic [ref=e1084] [cursor=pointer]:
+                    - generic [ref=e1086] [cursor=pointer]: ARTWORK
+                    - heading "terrace painting" [level=3] [ref=e1087] [cursor=pointer]
+                    - generic [ref=e1088] [cursor=pointer]: "Watercolor landscape painting: terrace painting."
+                    - generic [ref=e1089] [cursor=pointer]:
+                      - generic [ref=e1090] [cursor=pointer]: December 31, 2022
+                      - generic [ref=e1091] [cursor=pointer]: ·
+                      - generic [ref=e1092] [cursor=pointer]:
+                        - generic [ref=e1093] [cursor=pointer]: watercolour
+                        - generic [ref=e1094] [cursor=pointer]: landscape
+                        - generic [ref=e1095] [cursor=pointer]: architectural
+                        - generic [ref=e1096] [cursor=pointer]: "+2"
+                  - img [ref=e1097] [cursor=pointer]
+            - link [ref=e1099] [cursor=pointer]:
+              - /url: /artworks/watercolour-1-field-of-roses
+              - article [ref=e1100] [cursor=pointer]:
+                - generic [ref=e1101] [cursor=pointer]:
+                  - generic [ref=e1102] [cursor=pointer]:
+                    - generic [ref=e1104] [cursor=pointer]: ARTWORK
+                    - heading "Watercolour 1 field of roses" [level=3] [ref=e1105] [cursor=pointer]
+                    - generic [ref=e1106] [cursor=pointer]: Watercolor painting featuring watercolour 1 field of roses.
+                    - generic [ref=e1107] [cursor=pointer]:
+                      - generic [ref=e1108] [cursor=pointer]: December 31, 2022
+                      - generic [ref=e1109] [cursor=pointer]: ·
+                      - generic [ref=e1110] [cursor=pointer]:
+                        - generic [ref=e1111] [cursor=pointer]: watercolour
+                        - generic [ref=e1112] [cursor=pointer]: botanical
+                        - generic [ref=e1113] [cursor=pointer]: floral
+                        - generic [ref=e1114] [cursor=pointer]: "+2"
+                  - img [ref=e1115] [cursor=pointer]
+            - link [ref=e1117] [cursor=pointer]:
+              - /url: /artworks/waterfall
+              - article [ref=e1118] [cursor=pointer]:
+                - generic [ref=e1119] [cursor=pointer]:
+                  - generic [ref=e1120] [cursor=pointer]:
+                    - generic [ref=e1122] [cursor=pointer]: ARTWORK
+                    - heading "waterfall" [level=3] [ref=e1123] [cursor=pointer]
+                    - generic [ref=e1124] [cursor=pointer]: Watercolor study of water lilies.
+                    - generic [ref=e1125] [cursor=pointer]:
+                      - generic [ref=e1126] [cursor=pointer]: December 31, 2022
+                      - generic [ref=e1127] [cursor=pointer]: ·
+                      - generic [ref=e1128] [cursor=pointer]:
+                        - generic [ref=e1129] [cursor=pointer]: watercolour
+                        - generic [ref=e1130] [cursor=pointer]: landscape
+                        - generic [ref=e1131] [cursor=pointer]: nature
+                        - generic [ref=e1132] [cursor=pointer]: "+2"
+                  - img [ref=e1133] [cursor=pointer]
+            - link [ref=e1135] [cursor=pointer]:
+              - /url: /artworks/yellow-sky-aug-3
+              - article [ref=e1136] [cursor=pointer]:
+                - generic [ref=e1137] [cursor=pointer]:
+                  - generic [ref=e1138] [cursor=pointer]:
+                    - generic [ref=e1140] [cursor=pointer]: ARTWORK
+                    - heading "yellow sky Aug 3" [level=3] [ref=e1141] [cursor=pointer]
+                    - generic [ref=e1142] [cursor=pointer]: "Watercolor painting: yellow sky Aug 3."
+                    - generic [ref=e1143] [cursor=pointer]:
+                      - generic [ref=e1144] [cursor=pointer]: August 2, 2023
+                      - generic [ref=e1145] [cursor=pointer]: ·
+                      - generic [ref=e1146] [cursor=pointer]:
+                        - generic [ref=e1147] [cursor=pointer]: watercolour
+                        - generic [ref=e1148] [cursor=pointer]: landscape
+                        - generic [ref=e1149] [cursor=pointer]: sky
+                        - generic [ref=e1150] [cursor=pointer]: "+2"
+                  - img [ref=e1151] [cursor=pointer]
+        - generic [ref=e1153]:
+          - heading "Projects (6)" [level=2] [ref=e1154]:
+            - text: Projects
+            - generic [ref=e1155]: (6)
+          - generic [ref=e1156]:
+            - link [ref=e1157] [cursor=pointer]:
+              - /url: /projects/university-landscape-concept
+              - article [ref=e1158] [cursor=pointer]:
+                - generic [ref=e1159] [cursor=pointer]:
+                  - generic [ref=e1160] [cursor=pointer]:
+                    - generic [ref=e1162] [cursor=pointer]: PROJECT
+                    - heading "University Landscape Concept Study" [level=3] [ref=e1163] [cursor=pointer]:
+                      - text: University
+                      - mark [ref=e1164] [cursor=pointer]: Landscape
+                      - text: Concept Study
+                    - generic [ref=e1165] [cursor=pointer]:
+                      - text: Conceptual
+                      - mark [ref=e1166] [cursor=pointer]: landscape
+                      - text: design exploring institutional values and spatial excellence
+                    - generic [ref=e1167] [cursor=pointer]:
+                      - generic [ref=e1168] [cursor=pointer]: Invalid Date
+                      - generic [ref=e1169] [cursor=pointer]: ·
+                      - generic [ref=e1170] [cursor=pointer]:
+                        - generic [ref=e1171] [cursor=pointer]: landscape design
+                        - generic [ref=e1172] [cursor=pointer]: university
+                        - generic [ref=e1173] [cursor=pointer]: conceptual
+                        - generic [ref=e1174] [cursor=pointer]: "+1"
+                  - img [ref=e1175] [cursor=pointer]
+            - link [ref=e1177] [cursor=pointer]:
+              - /url: /projects/northgate-concept
+              - article [ref=e1178] [cursor=pointer]:
+                - generic [ref=e1179] [cursor=pointer]:
+                  - generic [ref=e1180] [cursor=pointer]:
+                    - generic [ref=e1182] [cursor=pointer]: PROJECT
+                    - heading "Northgate - Urban Design Concept" [level=3] [ref=e1183] [cursor=pointer]
+                    - generic [ref=e1184] [cursor=pointer]:
+                      - text: Comprehensive
+                      - mark [ref=e1185] [cursor=pointer]: landscape
+                      - text: design proposal for Northgate area featuring integrated streetscape, public spaces, and community amenities
+                    - generic [ref=e1186] [cursor=pointer]:
+                      - generic [ref=e1187] [cursor=pointer]: Invalid Date
+                      - generic [ref=e1188] [cursor=pointer]: ·
+                      - generic [ref=e1189] [cursor=pointer]:
+                        - generic [ref=e1190] [cursor=pointer]: landscape design
+                        - generic [ref=e1191] [cursor=pointer]: urban planning
+                        - generic [ref=e1192] [cursor=pointer]: streetscape
+                        - generic [ref=e1193] [cursor=pointer]: "+2"
+                  - img [ref=e1194] [cursor=pointer]
+            - link [ref=e1196] [cursor=pointer]:
+              - /url: /projects/orchard-community-space
+              - article [ref=e1197] [cursor=pointer]:
+                - generic [ref=e1198] [cursor=pointer]:
+                  - generic [ref=e1199] [cursor=pointer]:
+                    - generic [ref=e1201] [cursor=pointer]: PROJECT
+                    - heading "Orchard Community Space Design" [level=3] [ref=e1202] [cursor=pointer]
+                    - generic [ref=e1203] [cursor=pointer]:
+                      - mark [ref=e1204] [cursor=pointer]: Landscape
+                      - text: design integrating fruit production with community gathering spaces
+                    - generic [ref=e1205] [cursor=pointer]:
+                      - generic [ref=e1206] [cursor=pointer]: Invalid Date
+                      - generic [ref=e1207] [cursor=pointer]: ·
+                      - generic [ref=e1208] [cursor=pointer]:
+                        - generic [ref=e1209] [cursor=pointer]: landscape design
+                        - generic [ref=e1210] [cursor=pointer]: orchard
+                        - generic [ref=e1211] [cursor=pointer]: community space
+                        - generic [ref=e1212] [cursor=pointer]: "+1"
+                  - img [ref=e1213] [cursor=pointer]
+            - link [ref=e1215] [cursor=pointer]:
+              - /url: /projects/university-excellence-sketch
+              - article [ref=e1216] [cursor=pointer]:
+                - generic [ref=e1217] [cursor=pointer]:
+                  - generic [ref=e1218] [cursor=pointer]:
+                    - generic [ref=e1220] [cursor=pointer]: PROJECT
+                    - heading "University Excellence - Design Inquiry" [level=3] [ref=e1221] [cursor=pointer]
+                    - generic [ref=e1222] [cursor=pointer]: Conceptual design exploration examining the relationship between university spaces, institutional excellence, and community engagement
+                    - generic [ref=e1223] [cursor=pointer]:
+                      - generic [ref=e1224] [cursor=pointer]: Invalid Date
+                      - generic [ref=e1225] [cursor=pointer]: ·
+                      - generic [ref=e1226] [cursor=pointer]:
+                        - generic [ref=e1227] [cursor=pointer]: landscape design
+                        - generic [ref=e1228] [cursor=pointer]: conceptual
+                        - generic [ref=e1229] [cursor=pointer]: university
+                        - generic [ref=e1230] [cursor=pointer]: "+2"
+                  - img [ref=e1231] [cursor=pointer]
+            - link [ref=e1233] [cursor=pointer]:
+              - /url: /projects/community-garden-initiative
+              - article [ref=e1234] [cursor=pointer]:
+                - generic [ref=e1235] [cursor=pointer]:
+                  - generic [ref=e1236] [cursor=pointer]:
+                    - generic [ref=e1238] [cursor=pointer]: PROJECT
+                    - heading "Community Garden Initiative" [level=3] [ref=e1239] [cursor=pointer]
+                    - generic [ref=e1240] [cursor=pointer]: A collaborative project bringing green spaces to urban neighborhoods
+                    - generic [ref=e1241] [cursor=pointer]:
+                      - generic [ref=e1242] [cursor=pointer]: February 27, 2024
+                      - generic [ref=e1243] [cursor=pointer]: ·
+                      - generic [ref=e1244] [cursor=pointer]:
+                        - generic [ref=e1245] [cursor=pointer]: community
+                        - generic [ref=e1246] [cursor=pointer]: urban design
+                        - generic [ref=e1247] [cursor=pointer]: landscape
+                  - img [ref=e1248] [cursor=pointer]
+            - link [ref=e1250] [cursor=pointer]:
+              - /url: /projects/stanley-park-shoreline-resilience
+              - article [ref=e1251] [cursor=pointer]:
+                - generic [ref=e1252] [cursor=pointer]:
+                  - generic [ref=e1253] [cursor=pointer]:
+                    - generic [ref=e1254] [cursor=pointer]:
+                      - generic [ref=e1255] [cursor=pointer]: PROJECT
+                      - generic [ref=e1256] [cursor=pointer]: FEATURED
+                    - heading "Stanley Park Shoreline Resilience Initiative" [level=3] [ref=e1257] [cursor=pointer]
+                    - generic [ref=e1258] [cursor=pointer]: Brief description coming soon...
+                    - generic [ref=e1259] [cursor=pointer]:
+                      - generic [ref=e1260] [cursor=pointer]: November 12, 2025
+                      - generic [ref=e1261] [cursor=pointer]: ·
+                      - generic [ref=e1262] [cursor=pointer]:
+                        - generic [ref=e1263] [cursor=pointer]: landscape architecture
+                        - generic [ref=e1264] [cursor=pointer]: climate adaptation
+                        - generic [ref=e1265] [cursor=pointer]: coastal resilience
+                        - generic [ref=e1266] [cursor=pointer]: "+2"
+                  - img [ref=e1267] [cursor=pointer]
+        - generic [ref=e1269]:
+          - heading "Musings (15)" [level=2] [ref=e1270]:
+            - text: Musings
+            - generic [ref=e1271]: (15)
+          - generic [ref=e1272]:
+            - link [ref=e1273] [cursor=pointer]:
+              - /url: /musings/time-and-trees
+              - article [ref=e1274] [cursor=pointer]:
+                - generic [ref=e1275] [cursor=pointer]:
+                  - generic [ref=e1276] [cursor=pointer]:
+                    - generic [ref=e1277] [cursor=pointer]:
+                      - generic [ref=e1278] [cursor=pointer]: MUSING
+                      - generic [ref=e1279] [cursor=pointer]: FEATURED
+                    - 'heading "Time and Trees: Learning to Think in Generations" [level=3] [ref=e1280] [cursor=pointer]'
+                    - generic [ref=e1281] [cursor=pointer]: "Yesterday I participated in a community tree-planting event. Fifty volunteers, eighty trees, a February day threatening rain. As I tamped soil around a young cedar, I did the math: this tree, if it s"
+                    - generic [ref=e1282] [cursor=pointer]:
+                      - generic [ref=e1283] [cursor=pointer]: February 27, 2024
+                      - generic [ref=e1284] [cursor=pointer]: ·
+                      - generic [ref=e1285] [cursor=pointer]:
+                        - generic [ref=e1286] [cursor=pointer]: time
+                        - generic [ref=e1287] [cursor=pointer]: landscape architecture
+                        - generic [ref=e1288] [cursor=pointer]: indigenous knowledge
+                        - generic [ref=e1289] [cursor=pointer]: "+2"
+                  - img [ref=e1290] [cursor=pointer]
+            - link [ref=e1292] [cursor=pointer]:
+              - /url: /musings/bridging-worlds
+              - article [ref=e1293] [cursor=pointer]:
+                - generic [ref=e1294] [cursor=pointer]:
+                  - generic [ref=e1295] [cursor=pointer]:
+                    - generic [ref=e1296] [cursor=pointer]:
+                      - generic [ref=e1297] [cursor=pointer]: MUSING
+                      - generic [ref=e1298] [cursor=pointer]: FEATURED
+                    - 'heading "Bridging Worlds: On the False Dichotomy of Art and Academia" [level=3] [ref=e1299] [cursor=pointer]'
+                    - generic [ref=e1300] [cursor=pointer]: This morning, while preparing for a governance seminar, I found myself reaching for my watercolors. Not as procrastination, but as preparation. There's something about the fluidity of paint on paper
+                    - generic [ref=e1301] [cursor=pointer]:
+                      - generic [ref=e1302] [cursor=pointer]: October 19, 2024
+                      - generic [ref=e1303] [cursor=pointer]: ·
+                      - generic [ref=e1304] [cursor=pointer]:
+                        - generic [ref=e1305] [cursor=pointer]: reflection
+                        - generic [ref=e1306] [cursor=pointer]: academia
+                        - generic [ref=e1307] [cursor=pointer]: art
+                        - generic [ref=e1308] [cursor=pointer]: "+1"
+                  - img [ref=e1309] [cursor=pointer]
+            - link [ref=e1311] [cursor=pointer]:
+              - /url: /musings/governors%e2%80%99-global-climate-summit-2-the-road-to-copenhagen
+              - article [ref=e1312] [cursor=pointer]:
+                - generic [ref=e1313] [cursor=pointer]:
+                  - generic [ref=e1314] [cursor=pointer]:
+                    - generic [ref=e1316] [cursor=pointer]: MUSING
+                    - 'heading "Governors’ Global Climate Summit 2: the road to Copenhagen" [level=3] [ref=e1317] [cursor=pointer]'
+                    - generic [ref=e1318] [cursor=pointer]: The experience of LA is still overwhelmingly one of cars, cars and more cars. On a previous trip, with Jane Bird, CEO of Canada Line leading the way, we took transit to the airport – actually it did
+                    - generic [ref=e1320] [cursor=pointer]: October 5, 2009
+                  - img [ref=e1321] [cursor=pointer]
+            - link [ref=e1323] [cursor=pointer]:
+              - /url: /musings/mq-summary-of-bcbc-summit-part-3
+              - article [ref=e1324] [cursor=pointer]:
+                - generic [ref=e1325] [cursor=pointer]:
+                  - generic [ref=e1326] [cursor=pointer]:
+                    - generic [ref=e1328] [cursor=pointer]: MUSING
+                    - 'heading "MQ Summary of BCBC Summit: Part 3" [level=3] [ref=e1329] [cursor=pointer]'
+                    - generic [ref=e1330] [cursor=pointer]: "Innovation and BC’s 2020 Economy. A great topic and well-covered by the third session — a panel discussion entitled: **Tomorrow’s Technology Today: Innovation and BC’s 2020 Economy.** The final p"
+                    - generic [ref=e1332] [cursor=pointer]: September 22, 2009
+                  - img [ref=e1333] [cursor=pointer]
+            - link [ref=e1335] [cursor=pointer]:
+              - /url: /musings/angling-and-casting-in-san-francisco
+              - article [ref=e1336] [cursor=pointer]:
+                - generic [ref=e1337] [cursor=pointer]:
+                  - generic [ref=e1338] [cursor=pointer]:
+                    - generic [ref=e1340] [cursor=pointer]: MUSING
+                    - heading "Angling and Casting in San Francisco" [level=3] [ref=e1341] [cursor=pointer]
+                    - generic [ref=e1342] [cursor=pointer]: Exploring cities that you’ve been to before — perhaps for long weekends or, like me, when you were at graduate school across the Bay –is a great experience. You already have the lay of the land and
+                    - generic [ref=e1344] [cursor=pointer]: January 23, 2010
+                  - img [ref=e1345] [cursor=pointer]
+            - link [ref=e1347] [cursor=pointer]:
+              - /url: /musings/another-san-francisco-urban-publicway
+              - article [ref=e1348] [cursor=pointer]:
+                - generic [ref=e1349] [cursor=pointer]:
+                  - generic [ref=e1350] [cursor=pointer]:
+                    - generic [ref=e1352] [cursor=pointer]: MUSING
+                    - heading "Another San Francisco urban publicway…" [level=3] [ref=e1353] [cursor=pointer]
+                    - generic [ref=e1354] [cursor=pointer]: Sunday has turned into food shopping day in San Francisco because it is such a great experience — at least we have made it so. A couple of weeks ago in desperation I googled Whole Foods — and found
+                    - generic [ref=e1356] [cursor=pointer]: February 6, 2010
+                  - img [ref=e1357] [cursor=pointer]
+            - link [ref=e1359] [cursor=pointer]:
+              - /url: /musings/exploratorium-making-science-relevant
+              - article [ref=e1360] [cursor=pointer]:
+                - generic [ref=e1361] [cursor=pointer]:
+                  - generic [ref=e1362] [cursor=pointer]:
+                    - generic [ref=e1364] [cursor=pointer]: MUSING
+                    - heading "Exploratorium…making science relevant" [level=3] [ref=e1365] [cursor=pointer]
+                    - generic [ref=e1366] [cursor=pointer]: One of the real benefits of re-visiting the place of one’s graduate days is re-connecting with friends and colleagues from that era — especially ones that I’ve kept in touch with and enjoy. Bonnie L
+                    - generic [ref=e1368] [cursor=pointer]: February 8, 2010
+                  - img [ref=e1369] [cursor=pointer]
+            - link [ref=e1371] [cursor=pointer]:
+              - /url: /musings/franklin-farm-a-hampshire-haven
+              - article [ref=e1372] [cursor=pointer]:
+                - generic [ref=e1373] [cursor=pointer]:
+                  - generic [ref=e1374] [cursor=pointer]:
+                    - generic [ref=e1376] [cursor=pointer]: MUSING
+                    - heading "Franklin Farm — a Hampshire haven" [level=3] [ref=e1377] [cursor=pointer]
+                    - generic [ref=e1378] [cursor=pointer]: While the predominant experience during our UK sojourn so far has been urban — we have had some respite from election fever and the city frenzy. Last weekend we walked from our abode across the pede
+                    - generic [ref=e1380] [cursor=pointer]: May 5, 2010
+                  - img [ref=e1381] [cursor=pointer]
+            - link [ref=e1383] [cursor=pointer]:
+              - /url: /musings/london-vignettes
+              - article [ref=e1384] [cursor=pointer]:
+                - generic [ref=e1385] [cursor=pointer]:
+                  - generic [ref=e1386] [cursor=pointer]:
+                    - generic [ref=e1388] [cursor=pointer]: MUSING
+                    - heading "London vignettes…" [level=3] [ref=e1389] [cursor=pointer]
+                    - generic [ref=e1390] [cursor=pointer]:
+                      - text: London — what a rich cultural and physical
+                      - mark [ref=e1391] [cursor=pointer]: landscape
+                      - text: . I keep pouring over the map wondering who has ever walked all this maze of roads, streets, places, mews, lanes, malls and avenues. I made a bit
+                    - generic [ref=e1393] [cursor=pointer]: March 12, 2010
+                  - img [ref=e1394] [cursor=pointer]
+            - link [ref=e1396] [cursor=pointer]:
+              - /url: /musings/masters-of-the-new-universe
+              - article [ref=e1397] [cursor=pointer]:
+                - generic [ref=e1398] [cursor=pointer]:
+                  - generic [ref=e1399] [cursor=pointer]:
+                    - generic [ref=e1401] [cursor=pointer]: MUSING
+                    - heading "Master's of the New Universe" [level=3] [ref=e1402] [cursor=pointer]
+                    - generic [ref=e1403] [cursor=pointer]: "Catching up on my reading backlog and came across a piece in **Education Life** — NYT Jan 3/10 called: **“Master’s of the New Universe”.** Being interested in the post-secondary world, I follow the"
+                    - generic [ref=e1405] [cursor=pointer]: February 3, 2010
+                  - img [ref=e1406] [cursor=pointer]
+            - link [ref=e1408] [cursor=pointer]:
+              - /url: /musings/milano
+              - article [ref=e1409] [cursor=pointer]:
+                - generic [ref=e1410] [cursor=pointer]:
+                  - generic [ref=e1411] [cursor=pointer]:
+                    - generic [ref=e1413] [cursor=pointer]: MUSING
+                    - heading "Milano" [level=3] [ref=e1414] [cursor=pointer]
+                    - generic [ref=e1415] [cursor=pointer]: The Duomo. MonteNapoleone and Della Spiga. Great pizza. Classic universities. Neighbourhoods like Brera. Finding little trattorias where the menus aren’t translated. Learning how to say our room
+                    - generic [ref=e1417] [cursor=pointer]: June 11, 2010
+                  - img [ref=e1418] [cursor=pointer]
+            - link [ref=e1420] [cursor=pointer]:
+              - /url: /musings/reading-a-new-city
+              - article [ref=e1421] [cursor=pointer]:
+                - generic [ref=e1422] [cursor=pointer]:
+                  - generic [ref=e1423] [cursor=pointer]:
+                    - generic [ref=e1425] [cursor=pointer]: MUSING
+                    - heading "Reading a new city…" [level=3] [ref=e1426] [cursor=pointer]
+                    - generic [ref=e1427] [cursor=pointer]:
+                      - text: Settling in to San Francisco for a two-month stay reminds me of studies at UC Berkeley 25 years ago in “reading” the cultural
+                      - mark [ref=e1428] [cursor=pointer]: landscape
+                      - text: of a neighbourhood, town or city. When the opportunity to take
+                    - generic [ref=e1430] [cursor=pointer]: January 12, 2010
+                  - img [ref=e1431] [cursor=pointer]
+            - link [ref=e1433] [cursor=pointer]:
+              - /url: /musings/sf-movie-menus-reserve-seats-wine-dine
+              - article [ref=e1434] [cursor=pointer]:
+                - generic [ref=e1435] [cursor=pointer]:
+                  - generic [ref=e1436] [cursor=pointer]:
+                    - generic [ref=e1438] [cursor=pointer]: MUSING
+                    - heading "SF Movie menus…reserve seats + wine + dine" [level=3] [ref=e1439] [cursor=pointer]
+                    - generic [ref=e1440] [cursor=pointer]:
+                      - text: Continuing to experience the SF cultural
+                      - mark [ref=e1441] [cursor=pointer]: landscape
+                      - text: ", we ventured out to see Avatar in 3-D at the Sundance Kabuki Theatre in JapanTown. [http://www.sundancecinemas.com/](http://www.sundancecinemas.co"
+                    - generic [ref=e1443] [cursor=pointer]: January 16, 2010
+                  - img [ref=e1444] [cursor=pointer]
+            - link [ref=e1446] [cursor=pointer]:
+              - /url: /musings/planta-point-the-story
+              - article [ref=e1447] [cursor=pointer]:
+                - generic [ref=e1448] [cursor=pointer]:
+                  - generic [ref=e1449] [cursor=pointer]:
+                    - generic [ref=e1451] [cursor=pointer]: MUSING
+                    - 'heading "Planta Point: the story" [level=3] [ref=e1452] [cursor=pointer]'
+                    - generic [ref=e1453] [cursor=pointer]: "**Quayle Property – Planta Point Nanaimo** **3560 Planta Road/ 3550 Stephenson Point Road** There is a cedar bench beneath an Arbutus Tree on a point of consolidated rock above the sea. We call it"
+                    - generic [ref=e1455] [cursor=pointer]: April 5, 2014
+                  - img [ref=e1456] [cursor=pointer]
+            - link [ref=e1458] [cursor=pointer]:
+              - /url: /musings/introduction-to-the-principles-of-designed-leadership
+              - article [ref=e1459] [cursor=pointer]:
+                - generic [ref=e1460] [cursor=pointer]:
+                  - generic [ref=e1461] [cursor=pointer]:
+                    - generic [ref=e1463] [cursor=pointer]: MUSING
+                    - heading "Introduction to the Principles of Designed Leadership" [level=3] [ref=e1464] [cursor=pointer]
+                    - generic [ref=e1465] [cursor=pointer]: "#### Wednesday, July 19th, 2017 ## [Introduction to the Principles of Designed Leadership](http://www.cupblog.org/?p=21397 \"Permanent Link to Introduction to the Principles of Designed Leadership\")"
+                    - generic [ref=e1467] [cursor=pointer]: September 30, 2017
+                  - img [ref=e1468] [cursor=pointer]
+    - contentinfo [ref=e1470]:
+      - paragraph [ref=e1472]: © 2025 Moura Quayle. All rights reserved.
+  - contentinfo [ref=e1473]:
+    - generic [ref=e1474]:
+      - generic [ref=e1475]:
+        - generic [ref=e1476]:
+          - link "Moura Quayle" [ref=e1478] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e1479] [cursor=pointer]: Moura
+            - generic [ref=e1480] [cursor=pointer]: Quayle
+          - paragraph [ref=e1481]: Thinking · Feeling · Doing
+        - generic [ref=e1482]:
+          - navigation [ref=e1483]:
+            - generic [ref=e1484]:
+              - link "Gallery" [ref=e1485] [cursor=pointer]:
+                - /url: /gallery/artworks
+              - link "Publications" [ref=e1486] [cursor=pointer]:
+                - /url: /gallery/publications
+              - link "Musings" [ref=e1487] [cursor=pointer]:
+                - /url: /musings
+              - link "Press" [ref=e1488] [cursor=pointer]:
+                - /url: /press
+              - link "Projects" [ref=e1489] [cursor=pointer]:
+                - /url: /projects
+              - link "Search" [ref=e1490] [cursor=pointer]:
+                - /url: /search
+          - generic [ref=e1491]:
+            - link "Visit Moura Quayle on LinkedIn" [ref=e1492] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/moura-quayle-61907010/
+              - img [ref=e1493] [cursor=pointer]
+            - link "Visit Moura Quayle on Facebook" [ref=e1495] [cursor=pointer]:
+              - /url: https://www.facebook.com/mouraquayle
+              - img [ref=e1496] [cursor=pointer]
+            - link "Visit Moura Quayle on Instagram" [ref=e1498] [cursor=pointer]:
+              - /url: https://www.instagram.com/mouraquayle/
+              - img [ref=e1499] [cursor=pointer]
+        - generic [ref=e1503]:
+          - link "Get in Touch" [ref=e1504] [cursor=pointer]:
+            - /url: mailto:moura@mouraquayle.ca
+          - paragraph [ref=e1505]: moura@mouraquayle.ca
+      - paragraph [ref=e1507]: © 2025 Moura Quayle. All rights reserved.
+  - alert [ref=e1508]
+```

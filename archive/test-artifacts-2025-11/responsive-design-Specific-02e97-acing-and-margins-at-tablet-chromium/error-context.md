@@ -1,0 +1,179 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link "MQ STUDIO" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - text: MQ STUDIO
+          - generic [ref=e9]: Feeling · Thinking · Doing
+        - navigation [ref=e10]:
+          - link "Artworks" [ref=e11] [cursor=pointer]:
+            - /url: /gallery/artworks
+          - generic [ref=e12]: ·
+          - link "Publications" [ref=e13] [cursor=pointer]:
+            - /url: /gallery/publications
+          - generic [ref=e14]: ·
+          - link "Musings" [ref=e15] [cursor=pointer]:
+            - /url: /musings
+          - generic [ref=e16]: ·
+          - link "Press" [ref=e17] [cursor=pointer]:
+            - /url: /press
+          - generic [ref=e18]: ·
+          - link "Projects" [ref=e19] [cursor=pointer]:
+            - /url: /projects
+          - generic [ref=e20]: ·
+          - link "Search" [ref=e21] [cursor=pointer]:
+            - /url: /search
+    - main [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: Welcome to the studio of
+          - heading "MOURA QUAYLE" [level=1] [ref=e26]
+          - paragraph [ref=e27]: Academia · Leadership · Design
+        - generic [ref=e28]:
+          - generic [ref=e31] [cursor=pointer]:
+            - img "Thinking - Academic Research" [ref=e32] [cursor=pointer]
+            - generic [ref=e33] [cursor=pointer]:
+              - heading "Thinking" [level=2] [ref=e34] [cursor=pointer]
+              - paragraph [ref=e35] [cursor=pointer]: Academic papers, research, and intellectual explorations
+              - link "Explore Publications →" [ref=e36] [cursor=pointer]:
+                - /url: /gallery/publications
+          - generic [ref=e39] [cursor=pointer]:
+            - img "Feeling - Watercolor Art" [ref=e40] [cursor=pointer]
+            - generic [ref=e41] [cursor=pointer]:
+              - heading "Feeling" [level=2] [ref=e42] [cursor=pointer]
+              - paragraph [ref=e43] [cursor=pointer]: Watercolors, calligraphy, and visual expressions
+              - link "Explore Artworks →" [ref=e44] [cursor=pointer]:
+                - /url: /gallery/artworks
+          - generic [ref=e47] [cursor=pointer]:
+            - img "Doing - Leadership & Design" [ref=e48] [cursor=pointer]
+            - generic [ref=e49] [cursor=pointer]:
+              - heading "Doing" [level=2] [ref=e50] [cursor=pointer]
+              - paragraph [ref=e51] [cursor=pointer]: Leadership initiatives and collaborative ventures
+              - link "Explore Projects →" [ref=e52] [cursor=pointer]:
+                - /url: /gallery/publications?category=landscape
+        - paragraph [ref=e54]: Where governance meets watercolor, policy meets poetry, and decades of scholarship coexist with ongoing artistic exploration. This is a workspace in motion—a place where thinking, feeling, and doing converge.
+      - generic [ref=e56]:
+        - heading "About Moura Quayle" [level=2] [ref=e57]
+        - generic [ref=e58]:
+          - img "Moura Quayle" [ref=e60]
+          - generic [ref=e61]:
+            - paragraph [ref=e62]: Moura Quayle is a landscape architect, academic, and artist whose work spans governance, design, and creative expression. Her career has been defined by a commitment to interdisciplinary thinking and collaborative practice.
+            - paragraph [ref=e63]: As a Professor Emerita at the University of British Columbia School of Architecture and Landscape Architecture, Moura has contributed extensively to scholarship in landscape governance, community design, and urban planning. Her research explores the intersections of policy, place, and people.
+            - paragraph [ref=e64]: Beyond academia, Moura is an accomplished watercolor artist and calligrapher. Her visual work reflects the same attention to detail and emotional depth that characterizes her scholarly pursuits—a testament to the philosophy that thinking, feeling, and doing are inseparable.
+      - generic [ref=e69]:
+        - img [ref=e70]
+        - searchbox "Search content" [ref=e72]
+        - button "Submit search" [ref=e73] [cursor=pointer]: Search
+      - generic [ref=e74]:
+        - heading "Recent Additions to the Studio" [level=2] [ref=e75]
+        - generic [ref=e76]:
+          - link [ref=e77] [cursor=pointer]:
+            - /url: /artworks/dec21-painting
+            - article [ref=e78] [cursor=pointer]:
+              - generic [ref=e80] [cursor=pointer]: ARTWORK
+              - heading "Dec21 painting" [level=3] [ref=e81] [cursor=pointer]
+              - generic [ref=e82] [cursor=pointer]: "[AI GENERATED - PLACEHOLDER] Brief description based on the artwork's subject matter."
+              - generic [ref=e83] [cursor=pointer]:
+                - generic [ref=e84] [cursor=pointer]: December 20, 2024
+                - generic [ref=e85] [cursor=pointer]: watercolour +1
+          - link [ref=e86] [cursor=pointer]:
+            - /url: /artworks/dec-17-painting
+            - article [ref=e87] [cursor=pointer]:
+              - generic [ref=e89] [cursor=pointer]: ARTWORK
+              - heading "Dec 17 painting" [level=3] [ref=e90] [cursor=pointer]
+              - generic [ref=e91] [cursor=pointer]: "[AI GENERATED - PLACEHOLDER] Brief description based on the artwork's subject matter."
+              - generic [ref=e92] [cursor=pointer]:
+                - generic [ref=e93] [cursor=pointer]: December 16, 2024
+                - generic [ref=e94] [cursor=pointer]: watercolour +1
+          - link [ref=e95] [cursor=pointer]:
+            - /url: /artworks/flowers-in-vase-june-23
+            - article [ref=e96] [cursor=pointer]:
+              - generic [ref=e98] [cursor=pointer]: ARTWORK
+              - heading "Flowers in Vase June 23" [level=3] [ref=e99] [cursor=pointer]
+              - generic [ref=e100] [cursor=pointer]: "[AI GENERATED - PLACEHOLDER] Brief description based on the artwork's subject matter."
+              - generic [ref=e101] [cursor=pointer]:
+                - generic [ref=e102] [cursor=pointer]: June 22, 2024
+                - generic [ref=e103] [cursor=pointer]: watercolour +2
+          - link [ref=e104] [cursor=pointer]:
+            - /url: /artworks/april-13-park
+            - article [ref=e105] [cursor=pointer]:
+              - generic [ref=e106] [cursor=pointer]:
+                - generic [ref=e107] [cursor=pointer]: ARTWORK
+                - generic [ref=e108] [cursor=pointer]: FEATURED
+              - heading "April 13 Park" [level=3] [ref=e109] [cursor=pointer]
+              - generic [ref=e110] [cursor=pointer]: "[AI GENERATED - PLACEHOLDER] Brief description based on the artwork's subject matter."
+              - generic [ref=e111] [cursor=pointer]:
+                - generic [ref=e112] [cursor=pointer]: April 12, 2024
+                - generic [ref=e113] [cursor=pointer]: watercolour +2
+          - link [ref=e114] [cursor=pointer]:
+            - /url: /publications/governance-design-thinking
+            - article [ref=e115] [cursor=pointer]:
+              - generic [ref=e116] [cursor=pointer]:
+                - generic [ref=e117] [cursor=pointer]: PUBLICATION
+                - generic [ref=e118] [cursor=pointer]: FEATURED
+              - 'heading "Governance Through Design Thinking: A New Paradigm" [level=3] [ref=e119] [cursor=pointer]'
+              - generic [ref=e120] [cursor=pointer]: Exploring how design thinking methodologies can transform bureaucratic governance into citizen-centered solutions.
+              - generic [ref=e121] [cursor=pointer]:
+                - generic [ref=e122] [cursor=pointer]: March 14, 2024
+                - generic [ref=e123] [cursor=pointer]: governance +3
+          - link [ref=e124] [cursor=pointer]:
+            - /url: /publications/urban-governance-study
+            - article [ref=e125] [cursor=pointer]:
+              - generic [ref=e126] [cursor=pointer]:
+                - generic [ref=e127] [cursor=pointer]: PUBLICATION
+                - generic [ref=e128] [cursor=pointer]: FEATURED
+              - 'heading "Urban Governance and Sustainable Development: Balancing Growth and Equity" [level=3] [ref=e129] [cursor=pointer]'
+              - generic [ref=e130] [cursor=pointer]: Examining how governance structures shape sustainable development and equity outcomes in mid-sized cities.
+              - generic [ref=e131] [cursor=pointer]:
+                - generic [ref=e132] [cursor=pointer]: March 14, 2024
+                - generic [ref=e133] [cursor=pointer]: governance +4
+      - complementary [ref=e134]:
+        - generic [ref=e135]:
+          - paragraph [ref=e136]: “The studio is not just a place but a practice—where the academic and the artistic refuse to be separated, where thinking and feeling inform doing.”
+          - paragraph [ref=e137]: — David Fushtey, Partner in Dialogue
+  - contentinfo [ref=e138]:
+    - generic [ref=e139]:
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - link "Moura Quayle" [ref=e143] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e144] [cursor=pointer]: Moura
+            - generic [ref=e145] [cursor=pointer]: Quayle
+          - paragraph [ref=e146]: Thinking · Feeling · Doing
+        - generic [ref=e147]:
+          - navigation [ref=e148]:
+            - generic [ref=e149]:
+              - link "Gallery" [ref=e150] [cursor=pointer]:
+                - /url: /gallery/artworks
+              - link "Publications" [ref=e151] [cursor=pointer]:
+                - /url: /gallery/publications
+              - link "Musings" [ref=e152] [cursor=pointer]:
+                - /url: /musings
+              - link "Press" [ref=e153] [cursor=pointer]:
+                - /url: /press
+              - link "Projects" [ref=e154] [cursor=pointer]:
+                - /url: /projects
+              - link "Search" [ref=e155] [cursor=pointer]:
+                - /url: /search
+          - generic [ref=e156]:
+            - link "Visit Moura Quayle on LinkedIn" [ref=e157] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/moura-quayle-61907010/
+              - img [ref=e158] [cursor=pointer]
+            - link "Visit Moura Quayle on Facebook" [ref=e160] [cursor=pointer]:
+              - /url: https://www.facebook.com/mouraquayle
+              - img [ref=e161] [cursor=pointer]
+            - link "Visit Moura Quayle on Instagram" [ref=e163] [cursor=pointer]:
+              - /url: https://www.instagram.com/mouraquayle/
+              - img [ref=e164] [cursor=pointer]
+        - generic [ref=e168]:
+          - link "Get in Touch" [ref=e169] [cursor=pointer]:
+            - /url: mailto:moura@mouraquayle.ca
+          - paragraph [ref=e170]: moura@mouraquayle.ca
+      - paragraph [ref=e172]: © 2025 Moura Quayle. All rights reserved.
+  - alert [ref=e173]
+```
