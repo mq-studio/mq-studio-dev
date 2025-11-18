@@ -1,0 +1,62 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run weekly on Monday at 10:00 AM UTC
+    - cron: '0 10 * * 1'
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm audit (all dependencies)
+        run: npm audit --audit-level=high || true
+        continue-on-error: true
+
+      - name: Run npm audit (production only)
+        id: prod-audit
+        run: npm audit --production --audit-level=critical
+        continue-on-error: true
+
+      - name: Check for critical production vulnerabilities
+        if: steps.prod-audit.outcome == 'failure'
+        run: |
+          echo "❌ Critical vulnerabilities found in production dependencies"
+          npm audit --production --json > audit-results.json
+          exit 1
+
+      - name: Generate audit summary
+        if: always()
+        run: |
+          echo "## Security Audit Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Date:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          npm audit --json | jq -r '.metadata | "**Total Vulnerabilities:** \(.vulnerabilities.total)\n- Critical: \(.vulnerabilities.critical)\n- High: \(.vulnerabilities.high)\n- Moderate: \(.vulnerabilities.moderate)\n- Low: \(.vulnerabilities.low)"' >> $GITHUB_STEP_SUMMARY || echo "Audit data not available" >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload audit results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-audit-results
+          path: |
+            audit-results.json
+          retention-days: 30
