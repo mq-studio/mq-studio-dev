@@ -1,0 +1,243 @@
+name: Quarterly Security Review
+
+# Creates quarterly security review issue with complete checklist
+# Reviews deferred structural recommendations and overall security posture
+on:
+  schedule:
+    # Run on the 1st of every 3rd month at 09:00 UTC (Jan, Apr, Jul, Oct)
+    - cron: '0 9 1 1,4,7,10 *'
+  workflow_dispatch: # Allow manual trigger for testing
+
+jobs:
+  create-review-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Run npm audit
+        id: audit
+        continue-on-error: true
+        run: |
+          npm audit --json > audit-report.json
+          TOTAL=$(jq '.metadata.vulnerabilities.total' audit-report.json)
+          CRITICAL=$(jq '.metadata.vulnerabilities.critical' audit-report.json)
+          HIGH=$(jq '.metadata.vulnerabilities.high' audit-report.json)
+          MODERATE=$(jq '.metadata.vulnerabilities.moderate' audit-report.json)
+          LOW=$(jq '.metadata.vulnerabilities.low' audit-report.json)
+          
+          echo "total=${TOTAL}" >> $GITHUB_OUTPUT
+          echo "critical=${CRITICAL}" >> $GITHUB_OUTPUT
+          echo "high=${HIGH}" >> $GITHUB_OUTPUT
+          echo "moderate=${MODERATE}" >> $GITHUB_OUTPUT
+          echo "low=${LOW}" >> $GITHUB_OUTPUT
+
+      - name: Get current quarter
+        id: quarter
+        run: |
+          QUARTER=$(date +'Q%q %Y')
+          echo "quarter=${QUARTER}" >> $GITHUB_OUTPUT
+
+      - name: Check outdated dependencies
+        id: outdated
+        run: |
+          npm outdated --json > outdated-report.json || true
+          OUTDATED_COUNT=$(jq '. | length' outdated-report.json)
+          echo "count=${OUTDATED_COUNT}" >> $GITHUB_OUTPUT
+
+      - name: Create quarterly security review issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const quarter = '${{ steps.quarter.outputs.quarter }}';
+            const total = '${{ steps.audit.outputs.total }}';
+            const critical = '${{ steps.audit.outputs.critical }}';
+            const high = '${{ steps.audit.outputs.high }}';
+            const moderate = '${{ steps.audit.outputs.moderate }}';
+            const low = '${{ steps.audit.outputs.low }}';
+            const outdated = '${{ steps.outdated.outputs.count }}';
+
+            const body = `## ${quarter} Security Review
+
+**Priority: P1 - High**
+
+This is an automated quarterly security review to ensure the MQ Studio website maintains strong security posture.
+
+### Current Security Status
+
+**Vulnerabilities:**
+- 🔴 Critical: ${critical}
+- 🟠 High: ${high}
+- 🟡 Moderate: ${moderate}
+- 🟢 Low: ${low}
+- **Total:** ${total}
+
+**Dependencies:**
+- ${outdated} packages have updates available
+
+### Review Checklist
+
+#### 1. Vulnerability Assessment
+- [ ] Review [VULNERABILITY_TRACKING.md](../VULNERABILITY_TRACKING.md)
+- [ ] Confirm remaining vulnerabilities are still acceptable (admin/dev-only)
+- [ ] Check if any new critical/high vulnerabilities affect production code
+- [ ] Verify TinaCMS has addressed tracked vulnerabilities (lodash.set, mermaid, vite)
+- [ ] Update vulnerability tracking document
+
+#### 2. Dependency Updates
+- [ ] Review outdated dependencies: \`npm outdated\`
+- [ ] Update non-breaking dependencies: \`npm update\`
+- [ ] Check for major version updates requiring migration
+- [ ] Prioritize security-related updates
+
+#### 3. Access Control & Secrets
+- [ ] Audit GitHub repository access (users/teams)
+- [ ] Review Vercel project member access
+- [ ] Rotate API keys if >90 days old (check 1Password audit)
+- [ ] Verify TinaCMS admin access list is current
+- [ ] Check for exposed secrets: \`git secrets --scan\`
+
+#### 4. Deployment Security
+- [ ] Review Vercel security headers (CSP, HSTS, etc.)
+- [ ] Test HTTPS enforcement on production
+- [ ] Verify staging environment isolation
+- [ ] Check for debug/verbose logging in production
+
+#### 5. Code Security
+- [ ] Review recent security-related PRs/commits
+- [ ] Check for hardcoded secrets or credentials
+- [ ] Verify input validation on user-facing forms
+- [ ] Test XSS protections (DOMPurify usage)
+
+#### 6. Monitoring & Alerting
+- [ ] Verify Dependabot is running weekly (last run: check Actions tab)
+- [ ] Confirm security audit workflow is passing
+- [ ] Review TinaCMS vulnerability monitor results
+- [ ] Check for stale security alerts/PRs
+
+#### 7. Deferred Structural Improvements (Post-Discovery Phase)
+
+**Status:** ⏸️ Deferred until Week 10+ (after website rebuild experiments complete)
+
+Review status of [SECURITY_AUDIT_2025-11-18_STRUCTURAL_RECOMMENDATIONS.md](../docs/SECURITY_AUDIT_2025-11-18_STRUCTURAL_RECOMMENDATIONS.md):
+
+**Phase 1: Critical Security Infrastructure**
+- [ ] R3.1: Branching strategy (develop → release → main)
+- [ ] R4.1: Proper staging environment separate from dev
+- [ ] R5.1: Security policies (SECURITY.md)
+- [ ] R1.2: Dependabot configuration refinement
+
+**Phase 2: Repository Cleanup**
+- [ ] R1.1: Disable alerts on archived repos (manual web UI)
+- [ ] R1.3: Configure CodeQL per repo appropriately
+- [ ] R2.1: Consolidate documentation (organize .md files)
+- [ ] R3.2: Separate dev/prod working directories
+
+**Phase 3: Process Improvements**
+- [ ] R2.2: Align local and GitHub repo naming
+- [ ] R4.3: Centralize env var management
+- [ ] R5.2: Create security dashboard
+- [ ] Update CONTRIBUTING.md with new workflows
+
+#### 8. Documentation Updates
+- [ ] Update VULNERABILITY_TRACKING.md with current status
+- [ ] Document any new security procedures
+- [ ] Update .env.example if new secrets added
+- [ ] Review and update security documentation
+
+#### 9. Testing
+- [ ] Run full test suite: \`npm test\`
+- [ ] Test TinaCMS admin authentication
+- [ ] Verify content editing/publishing workflow
+- [ ] Test deployment to staging → production
+
+#### 10. Report & Follow-up
+- [ ] Create summary document of findings
+- [ ] File issues for identified problems (with priority labels)
+- [ ] Update security metrics/KPIs
+- [ ] Schedule follow-up for high-priority items
+
+### Resources
+
+**Documentation:**
+- [Vulnerability Tracking](../VULNERABILITY_TRACKING.md)
+- [Security Remediation Plan](../docs/SECURITY_REMEDIATION_PLAN.md)
+- [Structural Recommendations](../docs/SECURITY_AUDIT_2025-11-18_STRUCTURAL_RECOMMENDATIONS.md)
+
+**Commands:**
+\`\`\`bash
+# Run security audit
+npm audit
+
+# Check outdated packages
+npm outdated
+
+# Test production build
+npm run build
+
+# Run tests
+npm test
+
+# Check for exposed secrets (requires git-secrets)
+git secrets --scan
+\`\`\`
+
+### Previous Reviews
+<!-- Link to previous quarterly review issues here -->
+
+---
+
+**Next Review:** ${quarter.includes('Q1') ? 'Q2' : quarter.includes('Q2') ? 'Q3' : quarter.includes('Q3') ? 'Q4' : 'Q1 (next year)'}
+**Automated by:** \`quarterly-security-review.yml\` workflow
+**Run manually:** \`gh workflow run quarterly-security-review.yml\`
+`;
+
+            // Check if issue already exists for this quarter
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'security-review'
+            });
+
+            const existingIssue = issues.data.find(issue => 
+              issue.title.includes(quarter)
+            );
+
+            if (existingIssue) {
+              console.log(`Review already exists for ${quarter}: #${existingIssue.number}`);
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existingIssue.number,
+                body: `🔔 Reminder: ${quarter} security review is pending\n\n**Current status:**\n- ${total} total vulnerabilities\n- ${outdated} outdated packages`
+              });
+            } else {
+              const issue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `${quarter} Security Review`,
+                body: body,
+                labels: ['security', 'security-review', 'quarterly', 'priority-high'],
+                milestone: null, // Add milestone if you use them
+                assignees: [] // Add security lead if defined
+              });
+              console.log(`Created quarterly review: #${issue.data.number}`);
+            }
+
+      - name: Summary
+        run: |
+          echo "### Quarterly Security Review Created" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Quarter:** ${{ steps.quarter.outputs.quarter }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Vulnerabilities:** ${{ steps.audit.outputs.total }} total (${{ steps.audit.outputs.critical }} critical, ${{ steps.audit.outputs.high }} high)" >> $GITHUB_STEP_SUMMARY
+          echo "**Outdated Packages:** ${{ steps.outdated.outputs.count }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ GitHub issue created with complete review checklist" >> $GITHUB_STEP_SUMMARY

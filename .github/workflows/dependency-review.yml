@@ -1,0 +1,103 @@
+name: Dependency Review
+
+# Scans dependency changes in PRs for security vulnerabilities
+# Blocks PRs that introduce new high/critical vulnerabilities
+on: 
+  pull_request:
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v4
+        with:
+          # Fail on critical or high vulnerabilities
+          fail-on-severity: high
+          
+          # Allow some vulnerabilities we've deemed acceptable
+          # (TinaCMS admin dependencies - see VULNERABILITY_TRACKING.md)
+          allow-licenses: MIT, Apache-2.0, BSD-2-Clause, BSD-3-Clause, ISC
+          
+          # Deny known malicious packages
+          deny-packages: |
+            # Add any known malicious packages here
+          
+          # Comment on PR with results
+          comment-summary-in-pr: always
+          
+          # Block if adding dependencies with known vulnerabilities
+          fail-on-scopes: runtime
+
+      - name: Check for TinaCMS updates in PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            // Check if package.json changed
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number
+            });
+            
+            const packageChanged = files.some(file => 
+              file.filename === 'package.json' && file.status !== 'removed'
+            );
+            
+            if (!packageChanged) {
+              console.log('package.json not modified in this PR');
+              return;
+            }
+            
+            // Get the package.json diff
+            const packageFile = files.find(f => f.filename === 'package.json');
+            if (!packageFile || !packageFile.patch) {
+              return;
+            }
+            
+            // Check if TinaCMS version changed
+            const tinaCMSUpdated = packageFile.patch.includes('tinacms');
+            
+            if (tinaCMSUpdated) {
+              const comment = `## 🔍 TinaCMS Dependency Updated
+
+This PR modifies the \`tinacms\` dependency. Please ensure:
+
+### Testing Checklist
+- [ ] \`npm audit\` shows reduced vulnerability count
+- [ ] Build succeeds: \`npm run build\`
+- [ ] Tests pass: \`npm test\` (21/21 expected)
+- [ ] TinaCMS admin works: \`npm run dev\` → navigate to \`/admin\`
+- [ ] Content editing/publishing works
+- [ ] Check [TinaCMS migration guide](https://tina.io/docs/migration/) for breaking changes
+
+### Vulnerability Impact
+Check if this update addresses tracked vulnerabilities:
+- \`lodash.set\` (HIGH) - 7 instances in TinaCMS
+- \`mermaid\` DOMPurify bundling (HIGH)
+- \`vite\` (MODERATE) - dev server only
+
+See [VULNERABILITY_TRACKING.md](../VULNERABILITY_TRACKING.md) for current status.
+
+After merge, update vulnerability tracking document with new counts.
+`;
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: comment
+              });
+            }
